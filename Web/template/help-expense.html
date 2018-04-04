@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        @@include('./inc/meta.inc')
+    </head>
+    <body>
+        <!--header-->
+        @@include('./inc/header.inc')
+        <!--container-->
+        <div class="help-container">
+            <div class="help-header">
+                <p class="lang-feeTitle">费率说明</p>
+            </div>
+            <div class="help-body">
+                <div class="help-context">
+                    <div class="help-left">
+                        <!-- <div class="help-block">
+                            <p class="section-title lang-feeSection" index="0">自2017年9月26日起生效</p>
+                            <p class="section-text lang-feetext" index="0">为了鼓励流动性强劲，市场扩张更加紧密，VNBIG采用了多层次的制作者收费表。所有用户于2017年9月26日移至此模型。访问“<a class="import" href="{{path}assets.html?modle=record}">成交查询</a>”页面以跟踪您的进度。</p>
+                        </div>
+                        <div class="help-block">
+                            <p class="section-title lang-feeSection" index="1">制造者意味着什么？</p>
+                            <p class="section-text lang-feetext" index="1">每次交易都是在双方之间进行的：制造者的订单存在于交易前的订单上，以及接受订单的人，他们将订单匹配（或“采取”）制造商的订单。制造商如此命名，因为他们的订单使流动性在一个市场。接管者是通过将制造商的订单与自己的订单相匹配来消除流动性。<br>制造者模式鼓励市场流动性，奖励制造商的流动性，并以费用折扣。这也导致市场扩张更加严格，原因是制造商竞争激烈。收取者支付的较高费用通常被更严格的差价提供的更好的价格抵消。</p>
+                        </div> -->
+                        <div class="help-block hide" id="userInfo">
+                            <p class="fee-text nowFee"><span class="lang-feeText" index="0">您当前的制造者/接受者的费率为</span><br/><b><span id="nowSellFee">0.15</span>% / <span id="nowBuyFee">0.2</span>%</b></p>
+                            <p class="fee-text lang-feeText" index="1">向下一层进展</p>
+                            <span class="line-main">
+                                <span class="line-sub" id="lineSub"></span>
+                            </span>
+                            <p class="fee-text"><span class="lang-feeText" index="2">您的30天内交易量为</span><b><span id="nowVal">0</span> BTC</b></p>
+                            <p class="fee-text" id="shortP"><span class="lang-feeText" index="3">您需要</span><b><span id="nowShort">600.00</span> BTC</b><span class="lang-feeText" index="4">达到</span><b><span id="shortSellFee">0.15</span>% / <span id="shortBuyFee">0.2</span>%</b></p>
+                        </div>
+                        <div class="help-block">
+                            <!-- <p class="section-title lang-feeSection" index="2">交易费用是多少？</p> -->
+                            <table class="section-text" id="section-table">
+                                <tr class="th">
+                                    <th class="lang-feeTable" index="2">交易量(30天)</th>
+                                    <th class="lang-feeTable" index="0">制作者</th>
+                                    <th class="lang-feeTable" index="1">接受者</th>
+                                </tr>
+                                <!-- <tr class="tr">
+                                    <td>BTC</td>
+                                    <td>0.1%</td>
+                                    <td>0.1%</td>
+                                </tr>
+                                <tr class="tr">
+                                    <td>LTC</td>
+                                    <td>0.1%</td>
+                                    <td>0.1%</td>
+                                </tr>
+                                <tr class="tr">
+                                    <td>BCC</td>
+                                    <td>0.1%</td>
+                                    <td>0.1%</td>
+                                </tr>
+                                <tr class="tr">
+                                    <td>ETH</td>
+                                    <td>0.1%</td>
+                                    <td>0.1%</td>
+                                </tr>
+                                <tr class="tr">
+                                    <td>ETC</td>
+                                    <td>0.1%</td>
+                                    <td>0.1%</td>
+                                </tr> -->
+                            </table>
+                        </div>
+                        <div class="help-block">
+                            <p class="fee-text lang-feeText" index="5">每24小时，我们将计算该账户最后30天的交易量，并根据上述表格动态调整费用。</p>
+                        </div>
+                        <!-- <div class="help-block">
+                            <p class="lang-feetext" index="2">交易手续费将从您的成交总额中扣除。若成交后获得货币资产，则支付货币交易手续费；反之，若成交后获得数字资产，则支付数字资产交易手续费。</p>
+                        </div>
+                        <div class="help-block">
+                            <p class="lang-feetext" index="3">例如：您以6300美元卖出1BTC，会扣除9.45美元手续费，获得6290.55美元。您以6300元买入1BTC，会扣除0.0015BTC手续费，获得0.9985BTC。</p>
+                        </div> -->
+                    </div>
+                    <div class="help-right">
+                        <!-- 公用右侧 -->
+                        @@include('./inc/help.inc')
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        @@include('./inc/footer.inc')
+        @@include('./inc/js.inc')
+        <!-- build:js ./Web/js/expense.min.js -->
+        <script src="./Web/js/page/expense.js"></script>
+        <!-- endbuild -->
+        @@include('./inc/statis.inc')
+    </body>
+</html>

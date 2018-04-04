@@ -1,0 +1,75 @@
+.idcard-container {
+    table {
+        width: 100%;
+    }
+
+    tr {
+        height: 50px;
+    }
+
+    .idcard-row1 {
+        width: 20%;
+        padding-right: 25px;
+        text-align: right;
+        font-size: 16px;
+    }
+
+    .idcard-row2 {
+        width: 30%;
+        text-align: center;
+
+        label {
+            display: inline-block;
+            padding: 5px 15px;
+            background: $main;
+            color: $white;
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+        }
+    }
+
+    .idcard-row3 {
+        width: 50%;
+        padding: 10px 0;
+
+        img {
+            width: 50%;
+            min-height: 150px;
+        }
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 50px;
+        background: $main;
+        color: $white;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .idcard-pass,
+    .idcard-nopass {
+        text-align: center;
+
+        img {
+            width: 75px;
+            margin-bottom: 30px;
+        }
+
+        .idcard-text {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .idcard-why {
+            margin-bottom: 50px;
+            font-size: 14px;
+            color: #999;
+        }
+    }
+}

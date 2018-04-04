@@ -1,0 +1,51 @@
+/*
+ *  转入虚拟币
+ * */
+
+.incoin {
+    padding-right: 10px;
+
+    .moneyBox {
+        margin-top: 40px;
+        background: #fffffa;
+        border: 1px #fcdbc8 solid;
+        padding: 20px;
+        position: relative;
+
+        h3 {
+            font-size: 18px;
+            min-height: 105px;
+            padding: 60px 0 20px;
+            font-weight: normal;
+            color: #ff7519;
+        }
+
+        .ewmBox {
+            position: absolute;
+            width: 120px;
+            top: 24px;
+            right: 28px;
+            text-align: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
+            p {
+                font-size: 12px;
+                color: #ff7519;
+                text-align: center;
+            }
+        }
+    }
+
+    .explainBox {
+        margin-top: 30px;
+        line-height: 2;
+    }
+}
+
+.vi .coin-name-hide {
+    display: none;
+}

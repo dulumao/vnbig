@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    @@include('./inc/meta.inc')
+</head>
+<body>
+<!--header-->
+@@include('./inc/header.inc')
+<!--center-->
+<div class="trade-layout trade-bb">
+    <input type="hidden" value="0" id="type">
+    <div class="trade-left">
+        <div class="titles">
+            <h3 id="titlesTitle">
+                <span class="coin-to">-</span> /
+                <span class="coin-from">-</span>
+                <i class="titles-icon icon-off"></i>
+            </h3>
+            <!--<h4><span class="coin-to">-</span> / <span class="coin-from">-</span></h4>-->
+        </div>
+        @@include('./inc/tradeMarket.inc')
+        <div class="chart-box">
+            <div class="tag" id="kTag">
+                <span data-hour="1" class="disabled">1h</span>
+                <span data-hour="2">2h</span>
+                <span data-hour="6">6h</span>
+                <span data-hour="12">12h</span>
+                <span data-hour="24">1d</span>
+                <span data-hour="168" class="disabled">1w</span>
+                <span data-hour="0" class="on">All</span>
+            </div>
+            <div class="chart" id="chart"></div>
+        </div>
+        <div class="chart-filter" id="kFilter">
+            <span data-tag="0,1,2,6" class="lang-kBtn" index="0" data-time="300">5分钟</span>
+            <span data-tag="1,2,3,4,6" class="on lang-kBtn" index="1" data-time="900">15分钟</span>
+            <span data-tag="2,3,4,6" class="lang-kBtn" index="2" data-time="1800">30分钟</span>
+            <span data-tag="2,3,4,6" class="lang-kBtn" index="3" data-time="3600">1小时</span>
+            <span data-tag="5,6" class="lang-kBtn" index="4" data-time="28800">8小时</span>
+            <span data-tag="5,6" class="lang-kBtn" index="5" data-time="86400">日线</span>
+        </div>
+        <div class="trade-box">
+            <div class="buy" id="buyBox">
+                <div class="title">
+                    <sapn class="lang-buyBB" index="0">买入</sapn>
+                    <!-- <span class="coin-to">-</span> -->
+                    <span id="buyMax"></span>
+                </div>
+                <div class="handle">
+                    <div class="list">
+                        <label class="lang-buyBB" index="1">买入价格</label>
+                        <div class="input-box">
+                            <em class="coin-from">--</em>
+                            <input type="text" placeholder="请输入价格" class="lang-inputPriceBuy" id="buyPrice">
+                        </div>
+                    </div>
+                    <div class="list">
+                        <label class="lang-buyBB" index="2">买入数量</label>
+                        <div class="input-box">
+                            <em class="coin-to">--</em>
+                            <input type="text" placeholder="请输入数量" class="lang-inputValBuy" id="buyNum">
+                        </div>
+                    </div>
+                </div>
+                <div class="trade-info">
+                    <div class="list">
+                        <label class="lang-buyBB" index="3">交易额</label>
+                        <div class="text">
+                            <span id="buyTotal">0</span>
+                            <span class="coin-from">--</span>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <label class="lang-buyBB" index="6">手续费</label>
+                        <div class="text buy-fee">--</div>
+                    </div>
+                    <div class="list">
+                        <label class="lang-buyBB" index="4">交易密码</label>
+                        <div class="input-box">
+                            <i></i>
+                            <input type="text" newpassword="" autocomplete="off" id="buyPwd" class="lang-inputPassBuy"
+                                   placeholder="请输入交易密码">
+                        </div>
+                    </div>
+                </div>
+                <button class="btns lang-buyBB" index="5" type="button" id="buyBtn">买入</button>
+            </div>
+            <div class="sell" id="sellBox">
+                <div class="title">
+                    <span class="lang-sellBB" index="0">卖出</span>
+                    <!-- <span class="coin-to">-</span> -->
+                    <span id="sellMax"></span>
+                </div>
+                <div class="handle">
+                    <div class="list">
+                        <label class="lang-sellBB" index="1">卖出价格</label>
+                        <div class="input-box">
+                            <em class="coin-from">--</em>
+                            <input type="text" placeholder="请输入价格" class="lang-inputPriceSell" id="sellPrice">
+                        </div>
+                    </div>
+                    <div class="list">
+                        <label class="lang-sellBB" index="2">卖出数量</label>
+                        <div class="input-box">
+                            <em class="coin-to">--</em>
+                            <input type="text" placeholder="请输入数量" class="lang-inputValSell" id="sellNum">
+                        </div>
+                    </div>
+                </div>
+                <div class="trade-info">
+                    <div class="list">
+                        <label class="lang-sellBB" index="3">交易额</label>
+                        <div class="text">
+                            <span id="sellTotal">0</span>
+                            <span class="coin-from">--</span>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <label class="lang-sellBB" index="6">手续费</label>
+                        <div class="text sell-fee">--</div>
+                    </div>
+                    <div class="list">
+                        <label class="lang-sellBB" index="4">交易密码</label>
+                        <div class="input-box">
+                            <i></i>
+                            <input type="text" newpassword="" autocomplete="off" id="sellPwd" class="lang-inputPassSell"
+                                   placeholder="请输入交易密码">
+                        </div>
+                    </div>
+                </div>
+                <button class="btns lang-sellBB" index="5" type="button" id="sellBtn">卖出</button>
+            </div>
+        </div><!-- trade-box-->
+        <div class="newly">
+            <div class="sell" id="sellOrder">
+                <h4 class="table-title">
+                    <!--<span class="tip">
+                        总：85690.43258188
+                        <span class="coin-to">-</span>
+                    </span>-->
+                    <span class="lang-orderSell">卖出订单</span>
+                </h4>
+                <div class="table-box text-center">
+                    <div class="list thead">
+								<span class="td td-30">
+									<span class="lang-items" index="0">价格</span>
+									(<span class="coin-from">--</span>)
+
+								</span>
+                        <span class="td td-30">
+									<span class="lang-items" index="1">数量</span>
+									(<span class="coin-to">--</span>)
+								</span>
+                        <span class="td td-40">
+									<span class="lang-items" index="2">总价</span>
+									(<span class="coin-from">--</span>)
+								</span>
+                    </div>
+                    <div class="tbody">
+                        <ul>
+                            <!--<li class="list">
+                                <span class="td-30">0.07302214</span>
+                                <span class="td-30">0.07302143</span>
+                                <span class="td-40">0.31635386</span>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="buy" id="buyOrder">
+                <h4 class="table-title">
+                    <!--<span class="tip">
+                        总：85690.43258188
+                        <span class="coin-to">-</span>
+                    </span>-->
+                    <span class="lang-orderBuy">购买订单</span>
+                </h4>
+                <div class="table-box text-center">
+                    <div class="list thead">
+								<span class="td td-30">
+									<span class="lang-items" index="0">价格</span>
+									(<span class="coin-from">--</span>)
+
+								</span>
+                        <span class="td td-30">
+									<span class="lang-items" index="1">数量</span>
+									(<span class="coin-to">--</span>)
+								</span>
+                        <span class="td td-40">
+									<span class="lang-items" index="2">总价</span>
+									(<span class="coin-from">--</span>)
+								</span>
+                    </div>
+                    <div class="tbody">
+                        <ul>
+                            <!--<li class="list">
+                                <span class="td-30">0.07302214</span>
+                                <span class="td-30">0.07302143</span>
+                                <span class="td-40">0.31635386</span>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- newly-->
+        <!--个人挂单-->
+        <div class="newly" id="userNewly" style="display: none;">
+            <div class="sell" id="userSellOrder">
+                <h4 class="table-title">
+                    <span class="lang-userOrderSell">个人卖出订单</span>
+                </h4>
+                <div class="table-box text-center">
+                    <div class="list thead">
+								<span class="td td-25">
+									<span class="text">
+										<span class="lang-items" index="0">价格</span>
+										(<span class="coin-from">--</span>)
+									</span>
+								</span>
+                        <span class="td td-25">
+									<span class="text">
+										<span class="lang-items" index="1">数量</span>
+										(<span class="coin-to">--</span>)
+									</span>
+								</span>
+                        <span class="td td-25">
+									<span class="text">
+										<span class="lang-items" index="2">数量</span>
+										(<span class="coin-from">--</span>)
+									</span>
+								</span>
+                        <span class="td td-25 lang-items" index="6">操作</span>
+                    </div>
+                    <div class="tbody">
+                        <ul>
+                            <!--<li class="list">
+                                <span class="td-30">0.07302214</span>
+                                <span class="td-30">0.07302143</span>
+                                <span class="td-40">0.31635386</span>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="buy" id="userBuyOrder">
+                <h4 class="table-title">
+                    <span class="lang-userOrderBuy">个人购买订单</span>
+                </h4>
+                <div class="table-box text-center">
+                    <div class="list thead">
+								<span class="td td-25">
+									<span class="text">
+										<span class="lang-items" index="0">价格</span>
+										(<span class="coin-from">--</span>)
+									</span>
+								</span>
+                        <span class="td td-25">
+									<span class="text">
+										<span class="lang-items" index="1">数量</span>
+										(<span class="coin-to">--</span>)
+									</span>
+								</span>
+                        <span class="td td-25">
+									<span class="text">
+										<span class="lang-items" index="2">数量</span>
+										(<span class="coin-from">--</span>)
+									</span>
+								</span>
+                        <span class="td td-25 lang-items" index="6">操作</span>
+                    </div>
+                    <div class="tbody">
+                        <ul>
+                            <!--<li class="list">
+                                <span class="td-30">0.07302214</span>
+                                <span class="td-30">0.07302143</span>
+                                <span class="td-40">0.31635386</span>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- newly-->
+        <div class="history" id="history">
+            <h4 class="table-title">
+                <span class="lang-transactionRecord" index="0">最近成交记录</span>
+            </h4>
+            <div class="table-box text-center">
+                <div class="list thead">
+                    <span class="td td-25 lang-transactionRecord" index="1">成交时间</span>
+                    <span class="td td-15 lang-transactionRecord" index="2">买／卖</span>
+                    <span class="td td-20">
+								<span class="lang-transactionRecord" index="3">成交价</span>
+								(<span class="coin-from">-</span>)</span>
+                    <span class="td td-20">
+								<span class="lang-transactionRecord" index="4">成交量</span>
+								(<span class="coin-to">-</span>)</span>
+                    <span class="td td-20">
+								<span class="lang-transactionRecord" index="5">总金额</span>
+								(<span class="coin-from">-</span>)</span>
+                </div>
+                <div class="tbody">
+                    <ul>
+                        <!--<li class="list">
+                            <span class="td td-25">2017-09-22 09:12:22</span>
+                            <span class="td td-15 rise">买</span>
+                            <span class="td td-20">0.07302143</span>
+                            <span class="td td-20">0.31635386</span>
+                            <span class="td td-20">0.06457683</span>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div><!-- history-->
+        <div class="history" id="userHistory" style="display: none;">
+            <h4 class="table-title">
+                <span class="lang-transactionRecord" index="6">个人成交记录</span>
+            </h4>
+            <div class="table-box text-center">
+                <div class="list thead">
+                    <span class="td td-25 lang-transactionRecord" index="1">成交时间</span>
+                    <span class="td td-15 lang-transactionRecord" index="2">买／卖</span>
+                    <span class="td td-20">
+								<span class="lang-transactionRecord" index="3">成交价</span>
+								(<span class="coin-from">-</span>)</span>
+                    <span class="td td-20">
+								<span class="lang-transactionRecord" index="4">成交量</span>
+								(<span class="coin-to">-</span>)</span>
+                    <span class="td td-20">
+								<span class="lang-transactionRecord" index="5">总金额</span>
+								(<span class="coin-from">-</span>)</span>
+                </div>
+                <div class="tbody">
+                    <ul>
+                        <!--<li class="list">
+                            <span class="td td-25">2017-09-22 09:12:22</span>
+                            <span class="td td-15 rise">买</span>
+                            <span class="td td-20">0.07302143</span>
+                            <span class="td td-20">0.31635386</span>
+                            <span class="td td-20">0.06457683</span>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div><!-- history-->
+    </div><!-- trade-left -->
+    <div class="trade-right">
+        <div class="market" id="coinList">
+            <h4 class="lang-dealListTitle">交易中心</h4>
+            <ul class="tab">
+                <li class="item lang-toDeal" style="display: none;">---</li>
+                <li class="item lang-toBB on" style="display: none;">---</li>
+            </ul>
+            <div class="table-box text-center no-border">
+                <div class="list thead line-2">
+                    <span class="td td-20 lang-dealListItems" index="0">---</span>
+                    <span class="td td-30">
+								<span class="text">
+									<span class="lang-dealListItems" index="1">---</span>
+									<br/>(<span class="coin-from">--</span> )
+								</span>
+							</span>
+                    <span class="td td-25 lang-dealListItems" index="2">---</span>
+                    <span class="td td-25 lang-dealListItems" index="3">---</span>
+                </div>
+                <ul class="tbody" style="display: none;">
+                    <!--<li class="list click">
+                        <span class="td td-20">ETH</span>
+                        <span class="td td-30">0.07302143</span>
+                        <span class="td td-25">316331633163</span>
+                        <span class="td td-25 rise">+0.83</span>
+                    </li>-->
+                </ul>
+                <ul class="tbody" style="display: none;">
+                </ul>
+            </div>
+        </div>
+    </div><!-- trade-right-->
+</div>
+<!--footer-->
+@@include('./inc/footer.inc')
+@@include('./inc/js.inc')
+<!-- build:js ./Web/js/echarts.min.js -->
+<script src="./Web/js/plugins/echarts.js"></script>
+<!-- endbuild -->
+<!-- build:js ./Web/js/trade.min.js -->
+<script src="./Web/js/plugins/jquery.mCustomScrollbar.js"></script>
+<script src="./Web/js/common/array.js"></script>
+<script src="./Web/js/page/trade/buyInput.js"></script>
+<script src="./Web/js/page/trade/trade.js"></script>
+<!-- endbuild -->
+@@include('./inc/statis.inc')
+</body>
+</html>

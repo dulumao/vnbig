@@ -1,0 +1,393 @@
+.safety-container,
+.asset-container {
+    width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+
+    .center-box {
+        position: relative;
+        border: solid #e3e3e3 1px;
+        margin-top: 14px;
+
+        @include clearfix();
+    }
+
+    .center-left {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        margin-right: -1px;
+        border-right: solid 1px $gray;
+
+        .center-list {
+            width: 260px;
+            white-space: nowrap;
+
+            li {
+                position: relative;
+                padding: 15px 10px 15px 22px;
+                margin-top: -1px;
+                cursor: pointer;
+                border-left: solid 5px transparent;
+                border-top: solid 1px transparent;
+                border-bottom: solid 1px transparent;
+                font-size: 14px;
+                color: #666;
+            }
+
+            a {
+                font-size: 14px;
+            }
+
+            .icon {
+                @include vertical(sub);
+
+                width: 25px;
+                height: 22px;
+                margin-right: 10px;
+                padding: 0 !important;
+            }
+
+            .safety {
+                width: 19px;
+                height: 21px;
+
+                @include seticonbg('../img/licon/icon-safety', 'off');
+            }
+
+            .shiming {
+                width: 23px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-shiming', 'off');
+            }
+
+            .idCard {
+                width: 24px;
+                height: 18px;
+
+                @include seticonbg('../img/licon/icon-idCard', 'off');
+            }
+
+            .code1 {
+                width: 20px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-code1', 'off');
+            }
+
+            .code2 {
+                width: 20px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-code2', 'off');
+            }
+
+            .zcgl {
+                width: 22px;
+                height: 21px;
+
+                @include seticonbg('../img/licon/icon-zcgl', 'off');
+            }
+
+            .chongzhi {
+                width: 24px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-chongzhi', 'off');
+            }
+
+            .tixian {
+                width: 24px;
+                height: 23px;
+
+                @include seticonbg('../img/licon/icon-tixian', 'off');
+            }
+
+            .yhk {
+                width: 22px;
+                height: 16px;
+
+                @include seticonbg('../img/licon/icon-yhk', 'off');
+            }
+
+            .wt {
+                width: 17px;
+                height: 19px;
+
+                @include seticonbg('../img/licon/icon-wt', 'off');
+            }
+
+            .cx {
+                width: 20px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-cx', 'off');
+            }
+
+            .jlr {
+                width: 17px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-jlr', 'off');
+            }
+
+            .incoin {
+                width: 20px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-incoin', 'off');
+            }
+
+            .outcoin {
+                width: 20px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-outcoin', 'off');
+            }
+
+            .manage {
+                width: 21px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-management', 'off');
+            }
+
+            .recharge {
+                width: 25px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-recharge', 'off');
+            }
+
+            .deposit {
+                width: 25px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-deposit', 'off');
+            }
+
+            .bankCard {
+                width: 22px;
+                height: 18px;
+
+                @include seticonbg('../img/licon/icon-bankCard', 'off');
+            }
+
+            .entrust {
+                width: 20px;
+                height: 22px;
+                border: none;
+
+                @include seticonbg('../img/licon/icon-entrustManagement', 'off');
+            }
+
+            .handler {
+                width: 17px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-handler', 'off');
+            }
+
+            .arrows {
+                position: absolute;
+                line-height: 23px;
+                color: transparent;
+                font-size: $fz-small;
+                right: 14px;
+            }
+            //鼠标选中效果
+            li:hover,
+            .selected {
+                background: $body-bg;
+            }
+
+            li:hover,
+            li:hover .arrows,
+            .selected,
+            .selected .arrows {
+                color: $main;
+            }
+
+            //icon颜色
+            li:hover .safety,
+            .selected .safety {
+                width: 19px;
+                height: 21px;
+
+                @include seticonbg('../img/licon/icon-safety', 'on');
+            }
+
+            li:hover .shiming,
+            .selected .shiming {
+                width: 23px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-shiming', 'on');
+            }
+
+            li:hover .idCard,
+            .selected .idCard {
+                width: 24px;
+                height: 18px;
+
+                @include seticonbg('../img/licon/icon-idCard', 'on');
+            }
+
+            li:hover .code1,
+            .selected .code1 {
+                width: 20px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-code1', 'on');
+            }
+
+            li:hover .code2,
+            .selected .code2 {
+                width: 20px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-code2', 'on');
+            }
+
+            li:hover .zcgl,
+            .selected .zcgl {
+                width: 22px;
+                height: 21px;
+
+                @include seticonbg('../img/licon/icon-zcgl', 'on');
+            }
+
+            li:hover .chongzhi,
+            .selected .chongzhi {
+                width: 24px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-chongzhi', 'on');
+            }
+
+            li:hover .tixian,
+            .selected .tixian {
+                width: 24px;
+                height: 23px;
+
+                @include seticonbg('../img/licon/icon-tixian', 'on');
+            }
+
+            li:hover .yhk,
+            .selected .yhk {
+                width: 22px;
+                height: 16px;
+
+                @include seticonbg('../img/licon/icon-yhk', 'on');
+            }
+
+            li:hover .wt,
+            .selected .wt {
+                width: 17px;
+                height: 19px;
+
+                @include seticonbg('../img/licon/icon-wt', 'on');
+            }
+
+            li:hover .cx,
+            .selected .cx {
+                width: 20px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-cx', 'on');
+            }
+
+            li:hover .jlr,
+            .selected .jlr {
+                width: 17px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-jlr', 'on');
+            }
+
+            li:hover .incoin,
+            .selected .incoin {
+                width: 20px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-incoin', 'on');
+            }
+
+            li:hover .outcoin,
+            .selected .outcoin {
+                width: 20px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-outcoin', 'on');
+            }
+
+            li:hover .manage,
+            .selected .manage {
+                width: 21px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-management', 'on');
+            }
+
+            li:hover .recharge,
+            .selected .recharge {
+                width: 25px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-recharge', 'on');
+            }
+
+            li:hover .deposit,
+            .selected .deposit {
+                width: 25px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-deposit', 'on');
+            }
+
+            li:hover .bankCard,
+            .selected .bankCard {
+                width: 22px;
+                height: 18px;
+
+                @include seticonbg('../img/licon/icon-bankCard', 'on');
+            }
+
+            li:hover .entrust,
+            .selected .entrust {
+                width: 20px;
+                height: 22px;
+
+                @include seticonbg('../img/licon/icon-entrustManagement', 'on');
+            }
+
+            li:hover .handler,
+            .selected .handler {
+                width: 17px;
+                height: 20px;
+
+                @include seticonbg('../img/licon/icon-handler', 'on');
+            }
+
+            li:hover,
+            .selected {
+                color: $main-sub;
+                width: 261px;
+                background: #fff;
+                border-left: solid $main 5px;
+                border-top: solid $gray 1px;
+                border-bottom: solid $gray 1px;
+            }
+        }
+    }
+
+    .center-right {
+        position: relative;
+        width: 936px;
+        min-height: 635px !important;
+        background: $white;
+        float: right;
+        padding-bottom: 20px;
+    }
+}

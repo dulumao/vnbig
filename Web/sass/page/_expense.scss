@@ -1,0 +1,56 @@
+.help-container {
+    table {
+        width: 100%;
+        line-height: 35px;
+        background: #fff;
+        border: solid 1px #dcdcdc;
+        text-align: center;
+    }
+
+    .th {
+        background: #d9f0f8;
+    }
+
+    td,
+    th {
+        border: solid 1px #dcdcdc;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .tr:nth-child(odd) {
+        background: #f0f7fa;
+    }
+
+    .fee-text {
+        line-height: 18px;
+        text-align: center;
+    }
+
+    .nowFee {
+        margin-bottom: 15px;
+        line-height: 28px;
+        font-size: $fz-title;
+        color: $main-sub;
+    }
+
+    .line-main {
+        display: block;
+        margin: 10px 0;
+        height: 10px;
+        border: 1px $main-sub solid;
+        background-color: $white;
+        overflow: hidden;
+    }
+
+    .line-sub {
+        display: block;
+        height: 100%;
+        width: 50%;
+        background-color: $main;
+    }
+
+    b {
+        font-weight: bolder;
+    }
+}

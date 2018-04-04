@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    @@include('./inc/meta.inc')
+</head>
+<body>
+<!--header-->
+@@include('./inc/header.inc')
+<!--center-->
+<div class="register-content">
+    <div class="heading-text">
+        <p class="lang-rcreatAccount">创建您的帐户</p>
+        <i class="lang-rsubheading">注册VNBIG是创建帐户的第一步。一旦您的电子邮件确认，您需要完成您的个人资料并验证您的身份才能开始交易。</i>
+    </div>
+    <div class="bg-container">
+        <div class="form-warp">
+            <div class="form-cont fl">
+                <ul class="input-list">
+                    <li>
+                        <label>
+                            <span class="input-heading lang-rArea">国家:</span>
+                            <select id="selectTel">
+                                <option value="" class="lang-rchooseArea"> 选择国家...</option>
+                                <option value="86" class="lang-rchina"> 中国</option>
+                                <option value="84" class="lang-rvite"> 越南</option>
+                            </select>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span class="input-heading lang-rphone">手机号码:</span>
+                            <input id="rTel" type="text" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span class="input-heading lang-rcode">验证码:</span>
+                            <input id="rCode" type="text" class="input-code"/>
+                        </label>
+                        <span class="code-text lang-rGetCode" id="rGetCode">获取验证码</span>
+                    </li>
+                    <li>
+                        <label>
+                            <span class="input-heading lang-ruserPwd">密码:</span>
+                            <input id="rPass" type="text" newpassword autocomplete="off"/>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span class="input-heading lang-rrepass">重复输入密码:</span>
+                            <input id="rRpass" type="text" newpassword autocomplete="off"/>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span class="input-heading lang-rreferrer">推荐人:</span>
+                            <input id="rReferrer" type="text"/>
+                        </label>
+                    </li>
+                </ul>
+                <div class="hint">
+                    <i class="agree-box tick" id="rAgree"></i><span class="lang-ragreen">点击注册视为同意</span>
+                    <a class="use-clause lang-rclause" target="_blank" href="{{path}}agreement.html">"使用条款"</a>
+                    <a class="phone-register fr lang-rmailboxReg" href="{{path}}register-mail.html">邮箱注册</a>
+                </div>
+                <p class="warring-content visibility" id="rError">
+
+                </p>
+                <a href="javascript:;" class="register lang-ragreenRegister" id="rRegisterBtn">同意并注册</a>
+                <div class="hint">
+                    <span class="has-account lang-rhasAccount">已有帐号?</span>
+                    <a href="{{path}}login.html" class="to-login lang-rpLogin">请登录</a>
+                </div>
+            </div>
+            <div class="form-cont none-account fr">
+                <p class="lang-p1">1. 您提供的电子邮件地址将成为您的VNBIG ID，并将用于所有将来的通信，包括帐户恢复。保护您的电子邮件帐户，就像您的VNBIG帐户一样。请使用有效的电子邮件地址进行注册。</p>
+                <p class="lang-p2">2. 您的密码必须为6位字符以上（不包括6位字符），但建议您选择至少32个字符的随机字母数字符号密码。</p>
+                <p class="lang-p3">3. 不要使用任何您使用过的其他方式的注册密码，特别是对于您注册的电子邮件地址。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+@@include('./inc/footer.inc')
+@@include('./inc/js.inc')
+<!-- build:js ./Web/js/register.min.js -->
+<script src="./Web/js/common/register.js"></script>
+<!-- endbuild -->
+@@include('./inc/statis.inc')
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        @@include('./inc/meta.inc')
+    </head>
+    <body>
+        <!--header-->
+        @@include('./inc/header.inc')
+        <!--center-->
+        <div class="bg_fff">
+            <div class="main" style="padding:30px 0;">
+                <!--tab 切换 -->
+                <div class="auto">
+                    <div class="coinarticle">
+                        <h3 class="title"></h3>
+                        <h6><em class="langtxt"></em><span class="coinTime"></span></h6>
+                        <div class="content" id="content"></div>
+
+                        <!--投稿免责说明-->
+                        <!-- <div class="content" style="font-size:12px; margin-top:50px;">
+                            <p><b class="langtxt"></b></p>
+                            <p class="langtxt"></p>
+                            <p class="langtxt"></p>
+                        </div> -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--header-->
+        @@include('./inc/footer.inc')
+        <!--center-->
+        @@include('./inc/js.inc')
+        <!-- build:js ./Web/js/newlistinfo.min.js -->
+         <script src="./Web/js/page/newlist-info.js"></script>
+        <!-- endbuild -->
+        @@include('./inc/statis.inc')
+    </body>
+</html>

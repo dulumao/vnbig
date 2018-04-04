@@ -1,0 +1,65 @@
+<div class="safety-center center-right-safety">
+	<p class="center-title lang-title">安全中心</p>
+	<div class="center-leve">
+		<span class="leve-info">
+			<span class="leve-box"></span>
+		<span class="leve-text lang-leve">中等</span>
+		</span>
+		<span class="user-info">
+        <p>ID：<span class="user-id" id="userId"></span></p>
+		<p><span class="lang-SSitems" index="0">姓名：</span><span class="user-name" id="useName"></span></p>
+		<p><span class="lang-SSitems" index="1">邮箱：</span><span class="user-tel" id="useTel"></span></p>
+		</span>
+	</div>
+	<div class="user-fill">
+		<span class="fill">
+            	<span class="icon-box bshiming-off" id="SMicon"></span>
+		<span class="user-message">
+			<p class="auth-title lang-SSitems" index="2" id="SMtitle">实名认证</p>
+			<p class="auth-text"><i class="auth no" id="SMauth"></i><span id="SMstate"></span><a class="more" href="{{path}}safety.html?modle=authentication"
+		 id="SMmore"></a></p>
+		</span>
+		</span>
+		<span class="fill"><span class="icon-box bidCard-on" id="ZPicon"></span>
+		<span class="user-message">
+				<p class="auth-title lang-SSitems" index="3" id="ZPtitle">照片认证</p>
+				<p class="auth-text">
+					<i class="auth yes" id="ZPauth"></i>
+					<span id="ZPstate"></span>
+		<a href="{{path}}safety.html?modle=idCard" class="more" id="ZPmore"></a>
+		</p>
+		</span>
+		</span>
+		<span class="fill">
+			<span class="icon-box bcode-off" id="JYicon">
+		</span>
+		<span class="user-message">
+			<p class="auth-title lang-SSitems" index="4" id="JYtitle">交易密码</p>
+			<p class="auth-text"><i class="auth no"id="JYauth"></i><span id="JYstate"></span><a class="more" href="{{path}}safety.html?modle=transaction"
+		 id="JYmore"></a></p>
+		</span>
+		</span>
+	</div>
+	<ul class="auth-list">
+		<li class="bg-gray">
+			<span class="lang-loginPass" index="0">登录密码</span><span class="auth-explain lang-loginPass" index="1">登录密码VNBIG账户时需要输入的密码</span>
+			<span class="handle handle-gray" id="DLhandle"><a href="{{path}}safety.html?modle=login" class="more lang-loginPass" index="2">修改登录密码</a></span>
+		</li>
+		<li>
+			<span class="lang-tradePass" index="0">交易密码</span><span class="auth-explain lang-tradePass" index="1">在VNBIG进行交易时需要输入的密码</span>
+			<span class="handle handle-gray" id="JYhandle"><a href="{{path}}safety.html?modle=transaction" class="more lang-tradePass" index="2">修改交易密码</a></span>
+		</li>
+		<li  class="bg-gray">
+			<span class="lang-withdrawPass" index="0">提现密码</span><span class="auth-explain lang-withdrawPass" index="1">在VNBIG进行提现时需要输入的密码</span>
+			<span class="handle handle-gray" id="TXhandle"><a href="{{path}}safety.html?modle=withdraw" class="more lang-withdrawPass" index="2">修改提现密码</a></span>
+		</li>
+		<li>
+			<span class="lang-authPass" index="0">实名认证</span><span class="auth-explain lang-authPass" index="1">受国家要求及为了您的资金安全需进行实名认证</span><span class="handle handle-gray"><a id="SMhandle" href="{{path}}safety.html?modle=authentication" class="more"></a></span>
+		</li>
+		<li  class="bg-gray">
+			<span class="lang-idCardPass" index="0">照片认证</span><span class="auth-explain lang-idCardPass" index="1">受国家要求及为了您的资金安全需进行照片认证</span>
+			<span class="handle handle-gray"><a id="ZPhandle" href="{{path}}safety.html?modle=idCard" class="more lang-idCardPass" index="2">修改登录密码</a></span>
+		</li>
+
+	</ul>
+</div>

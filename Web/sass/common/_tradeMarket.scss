@@ -1,0 +1,33 @@
+.market-box {
+    width: 690px;
+    min-height: 350px;
+    border: 1px solid #e3e3e3 !important;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    z-index: 2;
+    background: #fff;
+
+    &:before {
+        position: absolute;
+        content: '';
+        background: url("../img/icon/market-triangle.png") no-repeat;
+        left: 78px;
+        top: -12px;
+        width: 18px;
+        height: 12px;
+    }
+
+    &.table-box .thead {
+        background: #ffff !important;
+        border-bottom: 1px solid #90cee3;
+    }
+
+    &.table-box .list .td {
+        font-size: 13px;
+    }
+}
+
+.market-hide {
+    display: none;
+}

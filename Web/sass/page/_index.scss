@@ -1,0 +1,225 @@
+.index-container {
+    min-width: $width;
+    min-height: 660px;
+
+    .wellcome-box {
+        padding: 40px 0;
+        background: $white;
+        text-align: center;
+
+        .wellcome-text {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .wellcome-about {
+            font-size: 20px;
+            color: $main-sub;
+        }
+    }
+
+    .index-banner {
+        height: 494px;
+        width: 100%;
+        min-width: $width;
+        background: #f4f4f4;
+    }
+
+    .islogin-box {
+        color: $white;
+
+        .login-title {
+            margin-bottom: 22px;
+            font-size: 18px;
+        }
+
+        .login-item {
+            line-height: 28px;
+
+            a {
+                color: $main;
+            }
+        }
+
+        .l-btn {
+            @include vertical(middle);
+
+            margin: 18px 0 10px;
+            padding: 5px 18px;
+            margin-right: 12px;
+            background: $white;
+            color: $main;
+            border: solid 1px $main;
+            border-radius: 5px;
+
+        }
+
+        .l-btn + a + a {
+            margin-right: 0;
+        }
+
+        .b-btn {
+            display: inline-block;
+            padding: 10px 50px;
+            margin-top: 25px;
+            background: $main;
+            color: #382503 !important;
+            border: solid #a57b08 1px;
+            border-radius: 5px;
+        }
+    }
+
+    .index-introduce {
+        background: $white;
+
+        .introduce-box {
+            @extend .width-main;
+
+            padding: 56px 0;
+        }
+
+        .introduce-text {
+            @include clearfix();
+        }
+
+        li {
+            width: 33%;
+            float: left;
+        }
+
+        .model-left {
+            float: left;
+        }
+
+        .model-center {
+            margin-left: 20%;
+        }
+
+        .model-right {
+            float: right;
+        }
+
+        .introduce-title {
+            font-size: 38px;
+            text-align: center;
+            margin-bottom: 90px;
+        }
+
+        .icon-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: $main-sub;
+        }
+
+        .icon-text {
+            width: 260px;
+            line-height: 24px;
+            font-size: $fz-main;
+            text-align: left;
+        }
+    }
+}
+
+.sell-pop {
+    width: 100%;
+    height: 100%;
+    min-width: $width;
+    background: rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88;
+    text-align: center;
+
+    .sell-panel {
+        width: 640px;
+        height: 480px;
+        border-radius: 10px;
+        background: #2b7185;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -240px;
+        margin-left: -320px;
+        z-index: 99;
+
+        .close {
+            display: block;
+            float: right;
+            width: 15px;
+            height: 14px;
+            cursor: pointer;
+            margin-right: 15px;
+            margin-top: 15px;
+
+            @include bgImg("icon/sell-close.png");
+
+            background-position: center center;
+        }
+
+        .sell-title {
+            color: #edc044;
+            font-size: 48px;
+            margin-top: 50px;
+        }
+
+        .view-now {
+            display: block;
+            width: 298px;
+            height: 58px;
+            margin: 25px auto 0;
+            line-height: 58px;
+            color: #382503;
+            font-size: 24px;
+            border: 1px solid #a57b08;
+            border-radius: 4px;
+            background: $main;
+
+            &:hover {
+                color: #382503 !important;
+                opacity: .9;
+            }
+        }
+
+        .count-down {
+            margin: 50px auto 0;
+            color: #fff;
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .time-container {
+            width: 475px;
+            height: 92px;
+            margin: 10px auto 0;
+            padding: 0 15px;
+            background: #006885;
+        }
+
+        .time-list {
+            @include clearfix();
+
+            margin: auto;
+
+            li {
+                float: left;
+                width: 14%;
+                text-align: center;
+
+                & > div {
+                    font-size: 40px;
+                }
+
+                span {
+                    font-size: $fz-main;
+                }
+            }
+
+            .sell-out {
+                font-size: 24px;
+            }
+        }
+    }
+}

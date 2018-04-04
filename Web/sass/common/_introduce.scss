@@ -1,0 +1,66 @@
+.introduce-box{
+    @extend .width-main;
+    margin-top: 50px;
+    .introduce-title{
+        font-size: 24px;
+        text-align: center;
+    }
+    .introduce-text{
+        @include clearfix();
+        margin: 50px 0 80px;
+        li{
+            width: 23%;
+            margin: 0 1%;
+            padding: 25px 0 0;
+            min-height: 300px;
+            float: left;
+            text-align: center;
+            background: $white;
+            box-shadow: 0 0 10px rgba(0,0,0,.07);
+        }
+        .icon-title{
+            margin: 15px 0 10px;
+            font-size: $fz-title;
+        }
+        .icon-text{
+            display: block;
+            padding: 0 30px;
+            height: 125px;
+            font-size: $fz-small;
+            line-height: 20px;
+        }
+    }
+    .introduce-news{
+        @include clearfix();
+        .news-block{
+            float: left;
+            width: 33%;
+        }
+        .news-type{
+            margin-bottom: 15px;
+            font-size: $fz-title;
+        }
+        .news-list{
+            position: relative;
+            min-height: 180px;
+            p{
+                line-height: 180px;
+                text-align: center;
+                color: $text-gray;
+                font-size: 16px;
+            }
+        }
+        li{
+            @extend .ellipsis;
+            line-height: 30px;
+            font-size: $fz-small;
+        }
+        .news-time{
+            margin-right: 10px;
+            color: $text-gray;
+        }
+        .more{
+            color: $text-gray;
+        }
+    }
+}

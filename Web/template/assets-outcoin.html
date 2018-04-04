@@ -1,0 +1,167 @@
+<div class="outcoin">
+	<p class="center-title lang-title">转出虚似币</p>
+
+	<div class="select-box">
+		<div class="div-select" id="coinType">
+			<i></i>
+			<cite selectid="1"></cite>
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+		<p class="select_p"><span class="lang-items" index="0">可用虚似币</span>：<em class="coinNum green" id="useNum">0</em></p>
+		<p class="select_p"><span class="lang-items" index="2">冻结虚似币</span>：<em class="coinNum orange" id="freezeNum">0</em></p>
+	</div>
+
+	<div class="inp-form">
+		<div class="form-box">
+			<div class="list">
+				<label class="lang-form" index="0">转出数量：</label>
+				<div class="input-box"><input type="text" id="coinNum"></div>
+			</div>
+			<div class="list">
+				<label class="lang-form" index="7">转出地址：</label>
+				<div class="input-box"><input type="text" id="address"></div>
+				<div class="particularly-hint lang-partHint" id="particularlyHint">
+					特别说明：提币请选择imtoken或者kcash钱包，选择其他钱包可能会无法接收而给您造成损失。
+				</div>
+			</div>
+
+			<!--<div class="list">
+				<label class="lang-form" index="4">手续费：</label>
+				<div class="input-box"><input type="text" id="fee"></div>
+				<p class="tips">
+					<span class="lang-form" index="5">手续费范围：</span>
+					<span id="feeLimit">&#45;&#45;</span>，
+					<span class="lang-form" index="6">增加手续费将提升到账速度</span>
+				</p>
+			</div>-->
+			<div class="list">
+				<label class="lang-form" index="1">提现密码：</label>
+				<div class="input-box"><input type="text" newpassword id="password" autocomplete="off"></div>
+			</div>
+			<div class="list">
+				<label class="lang-form" index="2">验证码：</label>
+				<div class="input-box telephone">
+					<input type="text" id="code" maxlength="6">
+					<button type="button" class="main-btn yzm lang-form" index="3" id="getCode">获取验证码</button>
+				</div>
+			</div>
+			<div class="list">
+				<label class="lang-form" index="8">手续费：</label>
+				<div class="out-tip">
+					<p class="text" id="feeTip">0</p>
+					<p class="min-number"><span class="lang-minText">最小提币数为：</span><span class="out-coin" id="minNumber">0</span><span class="coin-name">-</span></p>
+				</div>
+			</div>
+		</div>
+		<p class="messinfo lang-tips" index="0" id="msgTip">错误提示</p>
+		<button type="button" class="main-btn inpFormBtn lang-tips" index="1" id="submit">确认转出</button>
+	</div>
+
+	<div class="explainBox">
+		<p class="lang-explain" index="0">转出说明：</p>
+		<p>
+		    <span class="lang-explain" index="1">
+		        1. 转出是自动的，
+		    </span>
+					<span class="coin-name">
+		        -
+		    </span>
+					<span class="lang-explain" index="2">
+		        转账需要整个
+		    </span>
+					<span class="coin-name coin-name-hide">
+		        -
+		    </span>
+					<span class="lang-explain" index="3">
+		        网络进行确认，达到 3 个确认后您的
+		    </span>
+					<span class="coin-name">
+		        -
+		    </span>
+					<span class="lang-explain" index="4">
+		        会自动充值到您的账户中
+		    </span>
+				</p>
+				<p>
+		    <span class="lang-explain" index="5">
+		        2. 此地址是您唯一且独自使用的转入地址，您可以同时进行多次充值，也可将此地址做为您在矿池的付款地址
+		    </span>
+				</p>
+				<p class="orange">
+		    <span class="lang-explain" index="6">
+		        3. 本地址禁止充值除
+		    </span>
+					<span class="coin-name">
+		        -
+		    </span>
+					<span class="lang-explain" index="7">
+		        之外的其他资产 任何其他资产充值将不可找回
+		    </span>
+		</p>
+	</div>
+
+	<div class="record-box">
+		<div class="info_list_title">
+			<h3 class="lang-box" index="0">转出记录</h3>
+		</div>
+		<table class="table" id="history">
+			<colgroup>
+				<col width="10%">
+				<col width="20%">
+				<col width="20%">
+				<col width="10%">
+				<col width="20%">
+				<col width="10%">
+			</colgroup>
+			<thead>
+			<tr>
+				<th class="lang-box" index="1">提现ID</th>
+				<th class="lang-box" index="2">时间</th>
+				<th class="lang-box" index="3">提现</th>
+				<th class="lang-box" index="4">到帐</th>
+				<th class="lang-box" index="5">转账备注</th>
+				<th>
+					<div class="div-select select-small" id="historyStatus">
+						<i></i>
+						<cite selectid="1" class="lang-status" index="1">未确认</cite>
+						<ul>
+							<li><a href="javascript:;" selectid="1" class="lang-status" index="1">未确认</a></li>
+							<li><a href="javascript:;" selectid="2" class="lang-status" index="2">已确认</a></li>
+							<li><a href="javascript:;" selectid="3" class="lang-status" index="3">已处理</a></li>
+							<li><a href="javascript:;" selectid="4" class="lang-status" index="4">失败</a></li>
+						</ul>
+					</div>
+				</th>
+			</tr>
+			</thead>
+			<tbody>
+				<!--<tr>
+					<td>1</td>
+					<td>1</td>
+					<td>110</td>
+					<td>1</td>
+					<td>110</td>
+					<td>10</td>
+				</tr>-->
+			</tbody>
+		</table>
+	</div>
+	<div class="noEmail-box" id="noEmail">
+		<div class="noEmail">
+			<p class="binding-Email lang-noEmailText" index="0">请先绑定邮箱</p>
+			<div class="no-Email-row">
+				<span class="row-title lang-noEmailText" index="1">输入邮箱：</span>
+				<input type="E-mail" id="Email" class="lang-input">
+			</div>
+			<div class="no-Email-row">
+				<span class="row-title lang-noEmailText" index="2">输入验证码：</span>
+				<input type="text" class="short-input" id="noEmailCode">
+				<button type="button" id="noEmailGetCode" class="main-btn noEmail-getCode lang-noEmailText" index="3">获取验证码</button>
+				<p class="error-tips" id="errorTips">错误提示</p>
+				<button type="button" class="main-btn E-mail-submit lang-noEmailText" id="EmailSubmit" index="4">绑定邮箱</button>
+			</div>
+		</div>				
+	</div>
+</div>

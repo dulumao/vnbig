@@ -1,0 +1,323 @@
+.recharge {
+    .center-title {
+        height: 54px;
+        line-height: 54px;
+        font-size: 24px;
+
+        .hint-title {
+            font-size: 18px;
+            color: #666;
+            margin-left: 18px;
+        }
+
+        em {
+            font-size: 18px;
+            color: $main;
+        }
+    }
+
+    .light {
+        color: #666;
+    }
+}
+
+.lf {
+    float: left;
+}
+
+.recharge-handle {
+    min-height: 330px;
+    margin: auto;
+
+    @include clearfix;
+
+    .recharge-step {
+        text-align: left;
+        overflow: hidden;
+
+        &.step01 {
+            display: none;
+            width: 300px;
+            margin: 40px auto 0;
+
+            label {
+                font-size: 18px;
+            }
+        }
+
+        &.step02 {
+            display: none;
+            width: 460px;
+            margin: 20px auto 40px;
+        }
+
+        &.step03 {
+            display: none;
+        }
+
+        .mess-container {
+            width: 100%;
+            padding-bottom: 16px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            border-top: 4px solid $main-sub;
+            overflow: hidden;
+
+            .gathering-title {
+                text-align: center;
+                height: 45px;
+                line-height: 45px;
+                font-size: 18px;
+                color: #666;
+                border-bottom: 1px dashed #dedede;
+            }
+        }
+
+        .gathering-mess {
+            margin-top: 5px;
+
+            li {
+                margin-top: 20px;
+                font-size: $fz-main;
+            }
+
+            .headline {
+                display: inline-block;
+                width: 165px;
+                vertical-align: top;
+                text-align: right;
+                margin-right: 10px;
+            }
+
+            .detail-mess {
+                display: inline-block;
+                width: 270px;
+            }
+
+            .order-data > span {
+                vertical-align: top;
+            }
+
+            .import-hint {
+                font-size: 14px;
+                color: #f00;
+            }
+        }
+
+        .warning-text {
+            text-align: center;
+            color: #999;
+            font-size: $fz-small;
+            margin-top: 20px;
+        }
+
+        .order-num {
+            margin: 35px 0 15px;
+            font-size: $fz-title;
+
+            span {
+                display: inline-block;
+                width: 160px;
+                text-align: right;
+            }
+        }
+
+        .recharge-sum {
+            font-size: $fz-title;
+            margin-top: 50px;
+            text-align: center;
+            //span {
+            //    display: inline-block;
+            //    width: 160px;
+            //    text-align: right;
+            //}
+
+            .main-color {
+                color: $main-sub;
+            }
+        }
+
+        .order-mess {
+            display: inline-block;
+            width: 160px;
+            text-align: right;
+        }
+
+        .btn-handle {
+            margin-top: 50px;
+        }
+
+        .btn-cancel,
+        .btn-affirm {
+            display: inline-block;
+            width: 187px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 18px;
+
+            &:hover {
+                opacity: .9;
+                color: #fff !important;
+            }
+        }
+
+        .btn-cancel {
+            background: #bcbcbc;
+        }
+
+        .btn-affirm {
+            background: $main-sub;
+        }
+
+        .hint-success {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 100px;
+
+            i {
+                display: inline-block;
+                width: 68px;
+                height: 68px;
+
+                @include bgImg('common/icon-success.png');
+
+                vertical-align: middle;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .input-content {
+        position: relative;
+        width: 298px;
+        margin-top: 8px;
+
+        .recharge-num {
+            width: 100%;
+            height: 43px;
+            padding: 0 60px 0 18px;
+            font-size: 18px;
+            border: 1px solid $main-sub;
+            border-radius: 4px;
+        }
+
+        i {
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            font-size: $fz-main;
+            color: #666;
+        }
+    }
+
+    .roughly-equal {
+        color: #666;
+        font-size: $fz-main;
+        margin: 6px 0 10px;
+    }
+
+    .tip-content {
+        min-height: 20px;
+        margin-bottom: 15px;
+
+        .tip-text {
+            display: none;
+            text-indent: 166px;
+            color: #f00;
+        }
+    }
+
+    .next-step {
+        display: block;
+        width: 300px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        background: $main-sub;
+        border-radius: 4px;
+
+        &:hover {
+            opacity: .9;
+            color: #fff !important;
+        }
+    }
+}
+
+.info-title {
+    font-size: 18px;
+    color: $title;
+}
+
+.recharge-info {
+    border: 1px solid #dcdcdc;
+    margin-top: 12px;
+    .recharge-header {
+        background: #f0f7fa;
+
+        @include clearfix();
+
+        span {
+            width: 25%;
+            display: block;
+            padding: 10px 0;
+            text-align: center;
+            float: left;
+        }
+    }
+
+    .recharge-centre {
+        table {
+            width: 100%;
+        }
+
+        max-height: 630px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    td {
+        width: 25%;
+        text-align: center;
+        color: #333;
+        padding: 8px 0;
+    }
+
+    .odd {
+        background: #fff;
+    }
+
+    .even {
+        background: #fafafa;
+    }
+}
+
+.notes-on {
+    width: 100%;
+    background: #efefef;
+    border: 1px solid #dcdcdc;
+    margin: 60px 0 50px;
+    padding: 24px 20px;
+
+    p {
+        color: #ff3127;
+        font-size: 14px;
+    }
+
+    .notes-list {
+        font-size: $fz-small;
+        color: #666;
+
+        li {
+            margin-top: 5px;
+
+            .color-green {
+                color: $main-sub;
+            }
+        }
+    }
+}

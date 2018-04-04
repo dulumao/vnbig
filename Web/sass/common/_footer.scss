@@ -1,0 +1,54 @@
+.footer {
+    background: $body-bg;
+
+    .footer-body {
+        @extend .width-main;
+
+        padding: 30px 0 12px;
+    }
+
+    .footer-items {
+        margin-bottom: 60px;
+    }
+
+    .items-list {
+        @include vertical(top);
+
+        width: 33%;
+
+        .items-left {
+            float: left;
+        }
+
+        .items-center {
+            margin-left: 50%;
+        }
+
+        .items-right {
+            float: right;
+        }
+
+        .items-title {
+            margin-bottom: 18px;
+            font-size: 20px;
+            color: $main;
+        }
+
+        .items {
+            font-size: 16px;
+        }
+
+        li a {
+            line-height: 30px;
+            color: $white;
+        }
+    }
+
+    .footer-prompt,
+    .footer-info {
+        line-height: 30px;
+        text-align: center;
+        color: $white;
+        font-size: $fz-small;
+    }
+}

@@ -1,0 +1,114 @@
+<div class="recharge">
+    <div class="center-title">
+        <span class="lang-REcharge">充值</span><span class="hint-title lang-RNewNeedList" index="0">在进行交易前，您需要银行卡转账</span><em
+            class="lang-REcharge">充值</em>
+    </div>
+    <div class="not-card" id="notCard">
+        <div class="recharge-handle">
+            <div class="recharge-step step01" id="step01">
+                <label for="rechargeNum" class="lang-RNewNeedList" index="1"></label><br>
+                <div class="input-content">
+                    <input type="text" id="rechargeNum" class="recharge-num" maxlength="24">
+                    <i>VND</i>
+                </div>
+                <p class="roughly-equal" id="roughlyEqual"><span class="lang-RNewNeedList" index="2">约等于</span> 0 USD
+                </p>
+                <div class="tip-content">
+                    <span class="tip-text" id="tipText">
+                        tip
+                    </span>
+                </div>
+                <a class="next-step lang-RNewNeedList" id="next01" href="javascript:;" index="3">
+                    下一步
+                </a>
+            </div>
+            <div class="recharge-step step02" id="step02">
+                <div class="mess-container">
+                    <div class="gathering-title lang-RNewNeedList" index="4">收款方</div>
+                    <ul class="gathering-mess">
+                        <li><span class="headline lang-RNewNeedList" index="5">收款人 :</span><span class="detail-mess"
+                                                                                                 id="payee">---</span>
+                        </li>
+                        <li><span class="headline lang-RNewNeedList" index="6">收款帐号 :</span><span class="detail-mess"
+                                                                                                  id="accountNum">---</span>
+                        </li>
+                        <li><span class="headline lang-RNewNeedList" index="7">开户行：</span><span class="detail-mess"
+                                                                                                id="bankDeposit">---</span>
+                        </li>
+                        <li>
+                            <span class="headline lang-RNewNeedList" index="9">订单编号：</span>
+                            <span class="detail-mess order-data">
+                                <span id="orderNum">---</span>
+                                    <span class="import-hint lang-RNewNeedList" index="27">（非常重要，请务必填写此6位数字在转账或汇款的备注里！否则可能会影响充值到账！）
+                                </span>
+                            </span>
+
+                        </li>
+                    </ul>
+                    <div class="warning-text lang-RNewNeedList" index="8">
+                        VNBIG官方收款账户，请仔细核对信息
+                    </div>
+                </div>
+
+                <div class="recharge-sum"><span class="lang-RNewNeedList" index="10">充值金额： </span><em class="main-color"
+                                                                                                      id="rechargeTotal">---
+                    VND</em></div>
+                <div class="btn-handle" id="handleBtn">
+                    <a href="javascript:;" class="btn-cancel lf lang-RNewNeedList" id="cancel" index="11"
+                       data-index="4">取消</a>
+                    <a href="javascript:;" class="btn-affirm rt lang-RNewNeedList" id="affirm" index="12"
+                       data-index="1">确认已支付</a>
+                </div>
+            </div>
+
+            <div class="recharge-step step03" id="step03">
+                <div class="hint-success">
+                    <i></i><span id="hintSuccess"> --- </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="info-title">
+            <span class="lang-REczrecord">充值记录</span>
+        </div>
+        <div class="recharge-info" id="history">
+            <div class="recharge-header">
+                <span class="lang-REnavList" index="1">时间</span>
+                <span class="lang-REnavList" index="0">充值金额</span>
+                <span class="lang-REnavList" index="3">订单编号</span>
+                <span class="lang-REnavList" index="2">状态</span>
+            </div>
+
+            <div class="recharge-centre">
+                <table>
+                    <tbody>
+                    <!--<tr class="odd">-->
+                    <!--<td colspan="6" class="lang-noData">暂无数据</td>-->
+                    <!--</tr>-->
+                    </tbody>
+                </table>
+                <div class="scroll-load-more" id="dataShow">
+                    <span class="btn-loading"><i></i></span>
+                    <span class="lang-loadLang" index="0">滚动加载更多...</span>
+                </div>
+            </div>
+        </div>
+        <div class="notes-on">
+            <p class="lang-RNewNeedList" index="16">充值须知</p>
+            <ul class="notes-list">
+                <li><span class="lang-RNewNeedList" index="17">支持金额: 单笔最低充值金额为 </span><span class="color-green"> 1,500,000 VND</span></li>
+                <li class="lang-RNewNeedList" index="18">1. ---；
+                </li>
+                <li class="lang-RNewNeedList" index="19">2. ---
+                </li>
+                <li class="lang-RNewNeedList" index="20">3. ---
+                </li>
+                <li class="lang-RNewNeedList" index="28">4. ---
+                </li>
+                <li class="lang-RNewNeedList" index="29">5. ---
+                </li>
+            </ul>
+        </div>
+    </div><!-- has-card-->
+</div>

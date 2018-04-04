@@ -1,0 +1,45 @@
+<div class="assetsManagementLH assets-entrust" id="entrust">
+	<p class="center-title lang-ETentrust">委托管理</p>
+	<div class="selectbox">
+		<select class="fl" id="coinAll">
+			<option class="lang-ETnodata">暂无数据</option>
+		</select>
+		<div class="inp_time fl">
+			<input type="text" name="" id="startTime" class="lang-ETstarttime" placeholder="请选择开始时间" onfocus="WdatePicker({startDate:'%y-%M-01 00',dateFmt:'yyyy-MM-dd HH:mm',alwaysUseStartDate:true,lang:'en'})">
+			--
+			<input type="text" name="" id="endTime" class="lang-ETendtime" placeholder="请选择结束时间" onfocus="WdatePicker({startDate:'%y-%M-01 00',dateFmt:'yyyy-MM-dd HH:mm',alwaysUseStartDate:true,minDate:'#F{$dp.$D(\'startTime\')}',lang:'en'})">
+			<button id="ManageBtn" class="ok-btn lang-ETfind">查询</button>
+		</div>
+	</div>
+	<div class="list-choose-block">
+		<span class="choose-btn lang-ETorder selected" id="ordersBtn">委托挂单</span>
+		<span class="choose-btn lang-EThistory" id="historyBtn">委托历史</span>
+	</div>
+	<div class="record-info" style="margin-top:20px;">
+		<div class="record-header" id="recordHeader">
+			<span class="lang-ETtime">时间</span>
+			<span class="lang-ETbuysell">买卖</span>
+			<span class="lang-coinType">币种</span>
+			<span><em class="lang-ETWTWTJG">委托价格</em><em>(USD)</em></span>
+			<span class="lang-ETWTWTSL">委托数量</span>
+			<span class="lang-ETturnover">成交数量</span>
+			<span class="lang-ETunsettled"  id="unSettled">尚未成交</span>
+			<span class="lang-ETallSucceed" id="operatingBtn">操作</span>
+		</div>
+		<div class="record-centre" id="orderList">
+			<table>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+
+		<div class="record-centre" id="historyList">
+			<table>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,90 @@
+/* The current website project specification */
+
+//Commonly used specifications
+@import "./variables";
+@import "minxin";
+//Commonly used styles 
+@import "./common";
+
+/* common
+   ========================================================================== */
+body {
+    visibility: hidden;
+    margin-top: 60px;
+    font-family: $font-family;
+    font-size: $fz-main;
+    color: $text;
+    background: $body-bg;
+    line-height: 1.428;
+    overflow-x: hidden;
+}
+
+a {
+    color: $text;
+    text-decoration: none;
+}
+
+a:hover,
+.hover-color {
+    color: $hover !important;
+}
+
+button {
+    outline: none;
+}
+
+input[type=button] {
+    border: none;
+    outline: none;
+}
+
+input[type=submit] {
+    border: none;
+    outline: none;
+}
+
+.width-main {
+    width: $width;
+    margin: 0 auto;
+}
+
+.bg-color {
+    background: $body-bg;
+}
+
+/* font size */
+.fz-nav {
+    font-size: $fz-nav;
+}
+
+.fz-main {
+    font-size: $fz-main;
+}
+
+.fz-small {
+    font-size: $fz-small;
+}
+
+/* color */
+.color-main {
+    color: $text !important;
+}
+
+.color-hover {
+    color: $hover !important;
+}
+
+/* else */
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none;
+}
+
+.visibility {
+    display: block;
+    visibility: hidden;
+    min-height: 19px;
+}

@@ -1,0 +1,143 @@
+.assets-deposit {
+    .heading {
+        height: 54px;
+        line-height: 54px;
+        font-size: 24px;
+    }
+
+    .light {
+        color: #777;
+    }
+
+    .prompt {
+        color: $main;
+    }
+
+    .formbox {
+        padding: 40px 20px;
+
+        li {
+            margin-bottom: 15px;
+
+            @include clearfix;
+
+            margin-top: 15px;
+            position: relative;
+
+            label {
+                display: block;
+                float: left;
+                width: 170px;
+                text-align: right;
+                height: 34px;
+                line-height: 34px;
+                margin-right: 6px;
+            }
+
+            .inp {
+                float: left;
+                display: block;
+                padding: 8px 12px;
+                height: 34px;
+                width: 300px;
+                border: 1px solid #ddd;
+                outline: none;
+                border-radius: 3px;
+                background: none;
+                margin-right: 6px;
+            }
+
+            .inp-s {
+                display: block;
+                padding: 0 12px;
+                height: 34px;
+                line-height: 34px;
+            }
+
+            .inp-blue {
+                color: #006885;
+            }
+
+            .point {
+                color: $main;
+            }
+
+            .txBtn {
+                display: block;
+                width: 300px;
+                margin-left: 35px;
+                height: 44px;
+                line-height: 44px;
+                font-size: 16px;
+            }
+
+            .cash-inp {
+                float: none;
+                position: relative;
+                padding-right: 50px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .cash-currency {
+                position: absolute;
+                color: #666;
+                font-weight: bold;
+                top: 8px;
+                left: 430px;
+            }
+
+            .bank-reminding {
+                display: inline-block;
+                line-height: 32px;
+                color: #666;
+            }
+
+            .cash-all {
+                display: inline-block;
+                line-height: 32px;
+                color: #006885;
+                cursor: pointer;
+                margin-left: 16px;
+            }
+
+            .cash-all-hide {
+                display: none;
+            }
+
+            .reminding-box {
+                float: left;
+            }
+        }
+
+        .msg-tip {
+            text-indent: 166px;
+            color: #f00;
+            position: absolute;
+            top: -6px;
+            left: 10px;
+            display: none;
+        }
+    }
+
+    .tabTit {
+        font-size: 16px;
+        margin: 20px 0 5px;
+    }
+
+    .record-info {
+        .record-header {
+            span {
+                width: 16.6%;
+            }
+        }
+
+        td {
+            width: 16.6%;
+        }
+    }
+
+    .notes-color {
+        color: #666 !important;
+    }
+}

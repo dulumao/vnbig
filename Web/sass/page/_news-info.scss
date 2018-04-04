@@ -1,0 +1,255 @@
+@mixin setColor($type, $riseColor, $dropColor) {
+    #{$type} {
+        .main {
+            width: 1200px;
+            min-height: 613px;
+            margin: auto;
+
+            p {
+                color: #333;
+            }
+        }
+
+        .bg_fff {
+            background: $white;
+        }
+
+        .bg_green {
+            background: $dropColor !important;
+        }
+
+        .w390 {
+            width: 390px !important;
+        }
+
+        .w155 {
+            width: 155px !important;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+        .w62 {
+            width: 100px;
+        }
+
+        .w64 {
+            width: 93px;
+        }
+
+        .w76 {
+            width: 76px;
+        }
+
+        .w81 {
+            width: 81px;
+        }
+
+        .w82 {
+            width: 82px !important;
+        }
+
+        .w85 {
+            width: 60px;
+        }
+
+        .border-none {
+            border: none !important;
+        }
+
+        .green {
+            color: $dropColor !important;
+        }
+
+        .yellow {
+            color: #e98f00 !important;
+        }
+
+        .orange {
+            color: $riseColor !important;
+        }
+
+        .tradeadd-ga {
+            display: none;
+        }
+
+        .red {
+            color: $riseColor !important;
+        }
+
+        .w102 {
+            width: 102px !important;
+        }
+
+        .clearfix {
+            @include clearfix;
+        }
+
+        .Fleft {
+            float: left;
+        }
+
+        .Fright {
+            float: right;
+        }
+
+        .recTit {
+            font-size: 24px;
+            color: #333;
+            padding-bottom: 10px;
+            padding-top: 5px;
+            font-weight: normal;
+        }
+
+        .auto {
+            background-color: #fff;
+            margin-top: 20px;
+            border: 1px solid #f0f0f0;
+            padding: 25px 20px;
+            box-sizing: border-box;
+
+            @include clearfix();
+        }
+
+        .pagebox {
+            li {
+                border-top: 1px solid #f3f3f3;
+                padding-top: 20px;
+                margin-bottom: 24px;
+
+                a {
+                    display: block;
+                }
+
+                &:hover {
+                    i {
+                        color: $riseColor;
+                    }
+                }
+            }
+
+            h3 {
+                font-weight: normal;
+                margin-top: 12px;
+
+                span {
+                    float: right;
+                    color: #888;
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+
+                i {
+                    color: #000;
+                    font-size: 18px;
+                }
+            }
+
+            p {
+                color: #666;
+                margin-top: 5px;
+                line-height: 1.725;
+                word-break: break-all;
+                font-size: 13px;
+                height: 44px;
+                overflow: hidden;
+            }
+        }
+
+        .comment-title {
+            background: #f8f8f8;
+            height: 36px;
+            line-height: 36px;
+            margin-top: 20px;
+        }
+
+        .comment-content {
+            margin: 15px 0 8px 0;
+        }
+
+        .comment-title .sp1 {
+            color: $riseColor;
+        }
+
+        .comment-title .sp2 {
+            color: #777;
+            padding-left: 3px;
+        }
+
+        .coinarticle {
+            .content {
+                width: 88%;
+                margin: 15px auto;
+            }
+
+            h3 {
+                font-size: 20px;
+                color: #000;
+            }
+
+            h6 {
+                font-size: 14px;
+                color: #888;
+                margin: 15px 0 20px 0;
+            }
+
+            h3,
+            h6 {
+                text-align: center;
+                font-weight: normal;
+            }
+
+            p {
+                text-indent: 2em;
+                color: #555;
+                line-height: 2.1;
+                text-align: left;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .chart-legend {
+            @include clearfix();
+
+            padding-left: 10px;
+
+            li {
+                float: left;
+                padding: 3px 8px;
+                font-size: 12px;
+                border: 1px solid #f5f5f5;
+                margin-right: 10px;
+                border-radius: 3px;
+                cursor: default;
+                background: #f9f9f9;
+                color: #999;
+
+                &.legendL {
+                    cursor: pointer;
+                    color: #333;
+                    background: #f7f7f7;
+                }
+
+                &.on {
+                    background: #c7dcf4;
+                    font-weight: 600;
+                    color: #333;
+                }
+            }
+        }
+
+        .nonemess {
+            padding: 40px 0;
+            text-align: center;
+            color: #999 !important;
+        }
+    }
+}
+
+@include setColor('.zh,.ct,.en,.vi', #ff7519, #690);
+

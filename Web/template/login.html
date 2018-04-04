@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    @@include('./inc/meta.inc')
+</head>
+<body>
+<!--header-->
+@@include('./inc/header.inc')
+<!--center-->
+<div class="login-content">
+    <p class="lang-ltitle">登录到您的帐户</p>
+    <div class="bg-container">
+        <div class="form-warp">
+            <div class="form-cont fl">
+                <!--<p class="title-heading lang-ltitle" data-index="4" >登录</p>-->
+                <ul class="input-list">
+                    <li>
+                        <label>
+                            <p class="input-heading lang-luserId">电子邮件:</p>
+                            <input id="lUid" type="text"/>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <p class="input-heading lang-luserPwd">密码:</p>
+                            <input id="lPass" type="text" newpassword autocomplete="off"/>
+                        </label>
+                    </li>
+                    <li>
+                        <p class="input-heading lang-einputCode">请输入验证码</p>
+                        <input id="lCode" type="text" class="addLong"/>
+                        <span class="code-text" id="codeBox"> ... </span>
+                    </li>
+                </ul>
+                <p class="warring-content visibility" id="lError">
+
+                </p>
+                <a href="javascript:;" class="login lang-ltoLogin" id="lLoginBtn">登录</a>
+                <a href="/findpassword.html" class="to-forgetPwd lang-lforgetPwd">忘记密码？</a>
+            </div>
+            <div class="form-cont none-account fr">
+                <p class="title-heading lang-lnoneId">没有帐号？</p>
+                <div class="lang-lsubheading title-desc">创建一个帐号在东南亚最大的数字货币交易平台开始交易。</div>
+                <a href="/register-mail.html" class="cread-account lang-lcreatAccount">创建您的帐户</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal rest-passwrod" id="restPasswrod">
+    <div class="modal-mask"></div>
+    <div class="modal-content">
+        <div class="modal-title">
+            <a href="javascript:;" class="close" modal="close">×</a>
+            <h4 class="lang-rest" index="0">重置密码</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-box">
+                <div class="list">
+                    <label class="lang-rest" index="1">账号：</label>
+                    <span class="text" id="restAccount">--</span>
+                </div>
+                <div class="list">
+                    <label class="lang-rest" index="2">验证码：</label>
+                    <input type="text" class="input code" id="restCode">
+                    <button class="lang-rest main-btn get-code" index="3" id="restGetCode">获取验证码</button>
+                </div>
+                <div class="list">
+                    <label class="lang-rest" index="4">新密码：</label>
+                    <input type="text" newpassword autocomplete="off" class="input" id="restPwd">
+                </div>
+                <div class="list">
+                    <label class="lang-rest" index="5">确认密码：</label>
+                    <input type="text" newpassword autocomplete="off" class="input" id="restConPwd">
+                </div>
+                <p class="tips" id="reseTip">--</p>
+                <div class="list">
+                    <label>&nbsp;</label>
+                    <button type="button" class="submit main-btn lang-rest" id="restSubmit" index="6">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+@@include('./inc/footer.inc')
+@@include('./inc/js.inc')
+<!-- build:js ./Web/js/login.min.js -->
+<script src="./Web/js/page/login.js"></script>
+<!-- endbuild -->
+@@include('./inc/statis.inc')
+</body>
+</html>

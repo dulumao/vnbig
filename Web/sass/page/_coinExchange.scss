@@ -1,0 +1,71 @@
+.zh,.ct,.en,.vi{
+    .wtlist li:first-child {
+        width: 12.5% !important;
+    }
+    .wtlist li{
+        width: 12.5% !important;
+        text-align: center;
+    }
+    .wtlist{
+        .deal_his_list{
+            text-align: center;
+            dl{
+                padding-left: 37px;
+            }
+            dt{
+                width: 12.5% !important;
+                padding-left: 0;
+            }
+            dd{
+                width: 12.5%;
+            }
+        }
+    }
+    .coinNav{
+        li{
+            float: left;
+            width:15%;
+            text-align: center;
+            height: 90px;
+            line-height: 90px;
+            a{
+                font-size: 16px;         
+            }
+            &.on{
+                a{
+                    color:$main;
+                }
+            }
+        }
+    }
+    .bbentrust{
+        li:nth-child(2),.el_dl dd:nth-child(2){width: 140px;}
+        li:nth-child(3),.el_dl dd:nth-child(3){width: 111px;}
+        .first,.el_dl dt{padding-left:6px;width:94px}
+    }
+    .list-nav{
+        border-bottom: 1px solid rgba(30,39,49,.15);
+        margin-top: 15px;
+        margin-bottom: 15px;
+        @include clearfix();
+        li{
+            float: left;
+            margin-right: 20px;
+            a{
+                text-align: left;
+                display:block;
+                height: 40px;
+                line-height:40px;
+                font-size: 20px;
+                padding-bottom: 2px;
+            }
+            &.on{
+                a{
+                    padding-bottom: 0;
+                    border-bottom:2px $main solid;
+                    color: $main;
+                }
+            }
+        }
+    }
+}

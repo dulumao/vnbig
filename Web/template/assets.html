@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    @@include('./inc/meta.inc')
+</head>
+<body>
+    <!--header-->
+    @@include('./inc/header.inc')
+    <!--center-->
+    <div class="bg_fff">
+        <div class="asset-container">
+            <div class="location-box"><span class="lang-indexPage">11</span><i>></i><span class="location lang-asset">11</span></div>
+            <div class="center-box">
+                <div class="center-left">
+                    <ul class="center-list" id="centerList">
+                        <li srcurl="manage">
+                            <i class="icon manage"></i>
+                            <em class="lang-itemList" index="0">资产管理</em>
+                            <i class="arrows">></i>
+                        </li>
+                        <li srcurl="recharge">
+                            <i class="icon recharge"></i>
+                            <em class="lang-itemList" index="1">充值</em>
+                            <i class="arrows">></i>
+                        </li>
+                        <li srcurl="deposit">
+                            <i class="icon deposit"></i>
+                            <em class="lang-itemList" index="2">提现</em>
+                            <i class="arrows">></i>
+                        </li>
+                        <li srcurl="bankCard">
+                            <i class="icon bankCard"></i>
+                            <em class="lang-itemList" index="3">银行卡管理</em>
+                            <i class="arrows">></i>
+                        </li>
+                        <li srcurl="incoin">
+                            <i class="icon incoin"></i>
+                            <em class="lang-itemList" index="4">转入虚似币</em>
+                            <i class="arrows">></i>
+                        </li>
+                        <li srcurl="outcoin">
+                            <i class="icon outcoin"></i>
+                            <em class="lang-itemList" index="5">转出虚似币</em>
+                            <i class="arrows">></i>
+                        </li>
+                        <li srcurl="entrust">
+                            <i class="icon entrust"></i>
+                            <em class="lang-itemList" index="6">委托管理</em>
+                            <i class="arrows">></i>
+                        </li>
+                        <!--<li srcurl="record">-->
+                            <!--<i class="icon record"></i>-->
+                            <!--<em class="lang-itemList" index="7">成交查询</em>-->
+                            <!--<i class="arrows">></i>-->
+                        <!--</li>-->
+                        <li srcurl="handler">
+                            <i class="icon handler"></i>
+                            <em class="lang-itemList" index="8">VNBIG经理人</em>
+                            <i class="arrows">></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="center-right">
+                    <div class="assets-content hidden" id="managementRight"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    @@include('./inc/footer.inc') 
+    @@include('./inc/js.inc')
+    <script src="./Web/js/plugins/My97DatePicker/WdatePicker.js"></script>
+    <!-- build:js ./Web/js/assets.min.js -->
+    <script src="./Web/js/common/array.js"></script>
+    <script src="./Web/js/common/divSelect.js"></script>
+    <script src="./Web/js/common/divSelect.js"></script>
+    <script src="./Web/js/plugins/jquery.mCustomScrollbar.js"></script>
+    <script src="./Web/js/page/assets/manage.js"></script>
+    <script src="./Web/js/page/assets/isReal.js"></script>
+    <script src="./Web/js/page/assets/bankCard.js"></script>
+    <script src="./Web/js/common/scroll-load.js"></script>
+    <script src="./Web/js/page/assets/recharge.js"></script>
+    <script src="./Web/js/page/assets/deposit.js"></script>
+    <script src="./Web/js/page/assets/coinNum.js"></script>
+    <script src="./Web/js/page/assets/incoin.js"></script>
+    <script src="./Web/js/page/assets/outcoin.js"></script>
+    <script src="./Web/js/plugins/clipBoard.min.js"></script>
+    <script src="./Web/js/page/assets/handler.js"></script>
+    <script src="./Web/js/page/assets/entrust.js"></script>
+    <script src="./Web/js/page/assets/assets.js"></script>
+    <!-- endbuild -->
+    @@include('./inc/statis.inc')
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+.price-list{
+    min-height: 200px;
+    .hint-box{
+        width: 100%;
+        background: $gap-color;
+    }
+    .hint{
+        @extend .width-main;
+        padding: 5px 10px;
+        color: $main;
+        font-size: 13px;
+    }
+    .icon-trumpet{
+        @include vertical(sub);
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        background: url('../img/icon/icon-trumpet.png') no-repeat center;
+        background-size: 100% 100%;
+    }
+    .list-row{
+        cursor: pointer;
+    }
+    .list-title{
+        background: $dark-bg !important;
+        color: $white;
+    }
+    .list-row.odd{
+        background: $body-bg;
+    }
+    .list-row.even{
+        background: $bg-gray;
+    }
+    .list-row:last-child{
+        border-bottom: solid #ebebeb 1px;
+    }
+    .list-body:hover{
+        background-color: $gap-color;
+    }
+    .list-row-main{
+        @extend .width-main;
+        padding: 15px 0;
+        font-size: 0;
+    }
+    .list-row-main a:hover{
+        color: $text !important;
+    }
+    .list-vrow{
+        @include vertical(middle);
+        text-align: center;
+        font-size: $fz-main;
+    }
+    .price-icon{
+        @include vertical(sub);
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+    }
+    .price-name,.price-abb{
+        font-size: $fz-small;
+    }
+    .price-abb{
+        margin-left: 5px;
+        color: $text-gray;
+    }
+    .echarts-box{
+        width: 100%;
+        height: 60px;
+        margin: -10px 0;
+    }
+    .import a, .import{
+        color: $main;
+    }
+    .sort-box{
+        @include vertical(sub);
+        position: relative;
+        width: 5px;
+        height: 15px;
+        left: 5px;
+        .sort-up, .sort-down{
+            display: block;
+            position: absolute;
+            left: 0;
+        }
+        .sort-up{
+            top: -5px;
+            border: solid 5px transparent;            
+            border-bottom: solid 5px $text-gray;
+        }
+        .sort-down{
+            bottom: -5px;
+            border: solid 5px transparent;            
+            border-top: solid 5px $text-gray;
+        }
+        .sort-up.selected{
+            border-bottom: solid 5px $main;
+        }
+        
+        .sort-down.selected{
+            border-top: solid 5px $main;
+        }
+    }
+}
+.listBB .list-vrow{
+    width: 12.5%;
+}
+.list .list-vrow{
+    width: 16.6%;
+}

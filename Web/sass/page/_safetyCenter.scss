@@ -1,0 +1,46 @@
+.safety-container-bg {
+    background: #fff;
+    padding-top: 18px;
+    padding-bottom: 20px;
+}
+
+.safety-container {
+    //页面当前位置
+    .location-box {
+        padding: 8px 0;
+        color: $main;
+
+        i {
+            margin: 0 5px;
+        }
+
+        i,
+        span {
+            color: $text-gray;
+        }
+
+        .location {
+            color: $hover;
+        }
+    }
+
+    width: 1200px;
+    margin: auto;
+    background: #fff;
+
+    .center-box {
+        @include clearfix();
+
+        border: solid $gray 1px;
+    }
+
+    .assets-rig {
+        float: none;
+        width: auto;
+        padding-left: 0;
+    }
+
+    .center-right {
+        float: left;
+    }
+}

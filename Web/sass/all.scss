@@ -1,0 +1,43 @@
+//base
+@import "base/base";
+//common
+@import "common/header";
+@import "common/footer";
+@import "common/centerList";
+@import "common/dialog";
+@import "common/loading";
+@import "common/banner";
+@import "common/tradeMarket";
+// @import "common/priceList";
+@import "common/page-turn";
+//@import "common/dealList";
+@import "common/mCustomScrollbar";
+@import "common/buySell";
+@import "common/help";
+//page
+@import "page/index";
+@import "page/login";
+@import "page/register";
+@import "page/forget";
+//@import "page/coinExchange";
+@import "page/safety-right";
+@import "page/safety-idCard";
+@import "page/trade";
+@import "page/agreement";
+//@import "page/dateils";
+@import "page/news-info";
+@import "page/expense";
+@import "page/news";
+@import "page/wpaper";
+//@import "page/contact";
+
+//assetsPage
+@import "page/assets/assets";
+@import "page/assets/manage";
+@import "page/assets/bankCard";
+@import "page/assets/incoin";
+@import "page/assets/outcoin";
+@import "page/assets/handler";
+@import "page/assets/entrust";
+@import "page/assets/recharge";
+@import "page/assets/deposit";

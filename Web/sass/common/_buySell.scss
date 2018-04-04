@@ -1,0 +1,45 @@
+.buy-sell{
+    @include clearfix();
+    padding: 9px 0px 8px;
+    .list{
+        width: 49%;
+        box-sizing: border-box;
+        background: #fff;
+        .list-title{
+            line-height: 50px;
+            font-size: 24px;
+        }
+        .list-table{
+            border: solid $gray 1px;
+        }
+        .list-box{
+            max-height: 455px;
+            overflow-y: auto;
+        }
+        li, .list-items{
+            display: flex;
+            line-height: 35px;
+            text-align: center;
+        }
+        .list-items{
+            background: $bg-blue;
+        }
+        li:nth-child(even){
+            background: #f0f7fa;
+        }
+        span{
+            display: block;
+            flex: 1;
+            border-right: solid $gray 1px;
+        }
+        span:last-child{
+            border: none;
+        }
+    }
+    .sell-list{
+        float: left;
+    }
+    .buy-list{
+        float: right;
+    }
+}

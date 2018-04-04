@@ -1,0 +1,50 @@
+.help-news {
+    .section-title {
+        margin-bottom: 20px !important;
+    }
+
+    .help-block {
+        margin-bottom: 50px !important;
+    }
+
+    .news-iteam {
+        height: auto;
+    }
+
+    .news-list {
+        height: 30px;
+        margin: 10px 0;
+    }
+
+    .list-time {
+        @include vertical(top);
+
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        color: #333;
+        font-size: 14px;
+        font-weight: bold;
+        border-right: 2px solid #dcdcdc;
+        padding-right: 10px;
+    }
+
+    .link-box {
+        display: inline-block;
+        width: 250px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .list-link {
+        @include vertical(top);
+        @include ellipsis(1);
+
+        line-height: 30px;
+        font-size: 14px;
+        color: #666;
+        text-decoration: underline;
+        margin-left: 10px;
+        display: block;
+    }
+}

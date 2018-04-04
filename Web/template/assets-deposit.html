@@ -1,0 +1,104 @@
+<div class="assets-deposit" id="deposit">
+    <p class="center-title lang-DEtitle"></p>
+    <span class="prompt lang-DEinfo">
+        暂时不支持信用卡和支付宝提现，目前仅支持储蓄卡提现。
+    </span>
+    <ul class="formbox">
+        <li>
+            <label><em class="lang-DEaccount">收款银行账号</em>：</label>
+            <select name="" id="bankList" class="inp inp-blue">
+            </select>
+        </li>
+        <li>
+            <label><em class="lang-DEtxmoeny">提现金额</em>：</label>
+            <div class="reminding-box">
+                <input type="text" name="zh" class="inp cash-inp" id="txMoney" value=" ">
+                <span class="cash-currency">USD</span>
+                <p class="bank-reminding" id="bankReminding">--</p>
+                <p class="cash-all lang-DEall" id="cashAll">全部提现</p>
+            </div>
+        </li>
+        <li>
+            <label><em class="lang-DEchangpas">提现密码</em>：</label>
+            <input type="text" newpassword name="" class="inp" id="jypassword" autocomplete="off" value="">
+        </li>
+        <li style="padding-bottom: 10px;">
+            <p class="msg-tip" id="msgTip">tip</p>
+        </li>
+        <li>
+            <label></label>
+            <button type="button" class="txBtn lang-DEsuretx main-btn" id="txBtn">确认提现</button>
+        </li>
+    </ul>
+    <p class="tabTit lang-DEtxrecord">提现记录</p>
+
+    <div class="record-info" id="history">
+        <div class="record-header">
+            <span>
+                <em class="lang-DEtxmoeny">提现金额</em>
+                <em>(USD)</em>
+            </span>
+            <span>
+                <em class="lang-DEsxf">手续费</em>
+                <em>(USD)</em>
+            </span>
+            <span>
+                <em class="lang-DEsuremoeny">实际到账</em>
+                <em>(USD)</em>
+            </span>
+            <span class="lang-DEbankid">收款银行账号</span>
+            <span class="lang-DEtime">时间</span>
+            <span class="lang-DEstat">状态</span>
+            <!--<span class="lang-REstate"></span>-->
+        </div>
+
+        <div class="record-centre tbody">
+            <table>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="scroll-load-more" id="dataShow">
+                <span class="btn-loading"><i></i></span>
+                <span class="lang-loadHint" index="0">滚动加载更多...</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="notes-on">
+        <p class="lang-RNewNeedList" index="22">提现须知</p>
+        <ul class="notes-list">
+            <li>
+                <span class="lang-RNewNeedList" index="23">支持金额: 单笔最低提现金额：1美元；单笔最高提现金额：1400美元；当天累计最高提现金额：4600美元。</span>
+            </li>
+            <li class="lang-RNewNeedList" index="24">1.提现处理时间: 周一至周五 08:00~17:00；（非工作时间的提现，将延迟至第二个工作日的上午8点后处理，请您耐心等待）；</li>
+            <li class="lang-RNewNeedList" index="25">2. 提现方式: 仅限您实名并且已绑定的银行卡进行提现处理；提现具体到账时间以银行出账时间为准；</li>
+            <li class="lang-RNewNeedList" index="26">3. 注意事项: 非实名认证的银行卡提现我平台不予处理；如果您的资金未在规定时间内到账，请联系客服。</li>
+        </ul>
+    </div>
+    <!--<div class="record-centre" id="history">-->
+    <!--<table class="table">-->
+    <!--<colgroup>-->
+    <!--<col width="10%">-->
+    <!--<col width="10%">-->
+    <!--<col width="10%">-->
+    <!--<col width="10%">-->
+    <!--<col width="10%">-->
+    <!--<col width="10%">-->
+    <!--</colgroup>-->
+    <!--<thead>-->
+    <!--<tr>-->
+    <!--<th><span class="lang-DEtxmoeny">提现金额</span>(USD)</th>-->
+    <!--<th><span class="lang-DEsxf">手续费</span>(USD)</th>-->
+    <!--<th><span class="lang-DEsuremoeny">实际到账</span>(USD)</th>-->
+    <!--<th class="lang-DEbankid">收款银行账号</th>-->
+    <!--<th class="lang-DEtime">时间</th>-->
+    <!--<th class="lang-DEstat">状态</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--<tr class="odd">-->
+    <!--<td colspan="6" class="nonote lang-noData">暂无数据</td>-->
+    <!--</tbody>-->
+    <!--</table>-->
+    <!--</div>-->
+</div>

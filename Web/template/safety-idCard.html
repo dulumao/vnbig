@@ -1,0 +1,48 @@
+<div class="safety-center center-right-login idcard-container">
+	<p class="center-title lang-title">照片认证</p>
+	<div class="idcard-auth hide" id="auth">
+		<table>
+			<tr>
+				<td class="idcard-row1 lang-zm">身份证正面</td>
+				<td class="idcard-row2">
+					<label for="fileInput1" class="lang-chooseImg">选择图片</label>
+					<input id="fileInput1" class="hide-input" type="file" accept="image/*" />
+				</td>
+				<td class="idcard-row3">
+					<img id="img1" src="Web/img/common/zm.png" >
+				</td>
+			</tr>
+			<tr>
+				<td class="idcard-row1 lang-bm">身份证背面</td>
+				<td class="idcard-row2">
+					<label for="fileInput2" class="lang-chooseImg">选择图片</label>
+					<input id="fileInput2" class="hide-input" type="file" accept="image/*" />
+				</td>
+				<td class="idcard-row3">
+					<img id="img2" src="Web/img/common/bm.png" >
+				</td>
+			</tr>
+			<tr>
+				<td class="idcard-row1 lang-sc">手持身份证正面</td>
+				<td class="idcard-row2">
+					<label for="fileInput3" class="lang-chooseImg">选择图片</label>
+					<input id="fileInput3" class="hide-input" type="file" accept="image/*" />
+				</td>
+				<td class="idcard-row3">
+					<img id="img3" src="Web/img/common/cz.png" >					
+				</td>
+			</tr>
+		</table>
+		<button class="idcard-submit lang-submit" id="submit">确认提交</button>
+	</div>
+	<div class="idcard-pass hide" id="pass">
+		<img src="Web/img/common/pass.png" >
+		<p class="idcard-text lang-success">照片认证成功</p>
+	</div>
+	<div class="idcard-nopass hide" id="nopass">
+		<img src="Web/img/common/nopass.png" >
+		<p class="idcard-text lang-nosuccess">照片认证失败</p>
+		<p class="idcard-why lang-why">您申请认证的照片模糊，不能审核您的身份，请重新提交</p>	
+		<button class="resubmit lang-resubmit" id="resubmit">重新提交</button>	
+	</div>
+</div>

@@ -1,0 +1,20 @@
+.agreement-content{
+    background: $white;
+    padding: 25px 0;
+    .agree-title{
+        margin-bottom: 25px;
+        text-align: center;
+        font-size: $fz-big;
+    }
+    p{
+        display: block;
+        width: $width;
+        margin: 0 auto;
+        text-align:justify;
+	    line-height: 2.2;
+
+        a{
+            color: $main;
+        }
+    }
+}

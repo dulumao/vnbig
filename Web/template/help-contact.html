@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        @@include('./inc/meta.inc')
+    </head>
+    <body>
+        <!--header-->
+        @@include('./inc/header.inc')
+        <!--container-->
+        <div class="help-container">
+            <div class="help-header">
+                <p class="lang-conTitle">联系支持</p>
+            </div>
+            <div class="help-body">
+                <div class="help-context">
+                    <div class="help-left">
+                        <div class="help-block">
+                            <p class="section-title center-title lang-conSection">让我们知道你需要什么</p>
+                        </div>
+            
+                        <div class="help-block">
+                            <span class="section-text item-name lang-conItemName" index="5">您遇到了什么问题：</span>
+                            <input class="section-input" type="text" id="questionBox">
+                        </div>
+                        <div class="help-block">
+                            <span class="section-text item-name lang-conItemName" index="0">问题类型：</span>
+                            <select class="section-select" id="selectBox">
+                                <option value="0" selected class="lang-conselect" index="0">选择一个问题类型...</option>
+                                <option value="1" class="lang-conselect" index="1">注册</option>
+                                <option value="2" class="lang-conselect" index="2">密码</option>
+                                <option value="3" class="lang-conselect" index="3">实名认证</option>
+                                <option value="4" class="lang-conselect" index="4">充币</option>
+                                <option value="5" class="lang-conselect" index="5">提币</option>
+                                <option value="6" class="lang-conselect" index="6">交易</option>
+                                <option value="7" class="lang-conselect" index="7">其他</option>
+                            </select>
+                        </div>
+                        <div class="help-block">
+                            <span class="section-text item-name lang-conItemName" index="1">电子邮件：</span>
+                            <input class="section-input" type="text" id="EmailBox">
+                        </div>
+                        <div class="help-block">
+                            <span class="section-text item-name lang-conItemName" index="2">附件：</span>
+                            <label for="files" id="filesTip" class="section-files lang-conInput">上传图片或压缩文件</label>
+                            <input name="files" id="files" style="display: none;" type="file" >
+                        </div>
+                        <div class="help-block">
+                            <span class="section-text item-name lang-conItemName" index="3">问题内容：</span>
+                            <textarea class="section-area" id="detailText"></textarea>
+                        </div>
+                        <div class="help-block">
+                            <span class="section-text item-name lang-conItemName" index="4">如果遇到数字资产充值或提现问题，请填写您的充值钱包地址或您的提现钱包地址</span>
+                            <input class="section-input" type="text" id="packBox">
+                        </div>
+                        <div class="help-block">
+                            <button class="help-submit lang-conSubmit" id="submitBtn">提交</button>
+                        </div>
+                        <p class="tips lang-conTips">该邮箱不受联系请求的监控。有关技术援助，请联系我们。</p>
+                    </div>
+                    <div class="help-right">
+                        <!-- 公用右侧 -->
+                        @@include('./inc/help.inc')
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--footer-->
+        @@include('./inc/footer.inc')
+        @@include('./inc/js.inc')
+        <!-- build:js ./Web/js/contact.min.js -->
+        <script src="./Web/js/page/contact.js"></script>
+        <!-- endbuild -->
+        @@include('./inc/statis.inc')
+    </body>
+</html>

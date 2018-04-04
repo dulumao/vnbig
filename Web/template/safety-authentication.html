@@ -1,0 +1,60 @@
+<div class="safety-center center-right-authentication">
+	<p class="center-title lang-title">实名认证</p>
+	<div id="remind" class="hidden"><i class="center-tips"></i><p class="center-remind lang-tips">请认真填写（银行卡开户姓名），提交后不可修改!</p></div>
+	<ul class="cange-password hidden" id="authentication0">
+		<li>
+			<span id="realName" class="lang-SAitems" index="0">真实姓名：</span>
+			<input id="realNameInput" type="text">
+		</li>
+		<li>
+			<span id="numberId" class="lang-SAitems" index="1">身份证号：</span>
+			<input id="numberIdInput" type="text">
+		</li>
+		<li class="min-topli">
+			<p class="prompt" id="prompt"></p>
+		</li>
+		<li class="min-topli">
+			<button type="button" class="main-btn cange-submit lang-SAitems" index="2" id="determineBtn">确定</button>
+		</li>
+	</ul>
+	<ul class="cange-password hidden" id="authentication1">
+		<li class="remind-box">
+			<img src="Web/img/common/pass.png">
+			<p class="message-state lang-authSuccess" index="0" id="messageState">已认证</p>
+		</li>
+		<li class="message-center">
+			<span class="real-name lang-authSuccess" index="1" id="realName">真实姓名：</span>
+			<span class="message" id="messageName"></span>
+		</li>
+		<li class="message-center">
+			<span class="real-name lang-authSuccess" index="2" id="realNumber">身份证号码：</span>
+			<span class="message" id="messageNumber"></span>
+		</li>
+	</ul>
+	<ul class="cange-password hidden" id="authentication2">
+		<li class="remind-box">
+			<img src="Web/img/common/nopass.png">
+			<p class="message-state lang-authDefeated" index="0" id="messageState">审核不通过</p>
+		</li>
+		<li class="message-center">
+			<p class="renmind-p"></p>
+			<div class="resubmit-box">
+				<button type="button" class="main-btn resubmit lang-authDefeated" index="1" id="resubmit">重新提交</button>
+			</div>
+		</li>
+	</ul>
+	</ul>
+	<ul class="cange-password hidden" id="authentication3">
+		<li class="message-center">
+			<span class="real-name lang-authAudit" index="0" id="realName">真实姓名：</span>
+			<span class="message" id="messageNameing"></span>
+		</li>
+		<li class="message-center">
+			<span class="real-name lang-authAudit" index="1" id="realNumber">身份证号码：</span>
+			<span class="message" id="messageNumbering"></span>
+		</li>
+		<li class="min-topli">
+			<em class="tip-btn lang-authAudit" index="2" id="resubmiting">审核中</em>
+		</li>
+	</ul>
+</div>

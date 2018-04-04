@@ -1,0 +1,361 @@
+.safety-container {
+    // 安全中心右边的样式
+    .safety-center {
+        background: #fff;
+        margin: 0;
+        padding: 15px 50px;
+
+        .center-title {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+    } // 安全中心
+    .center-right-safety {
+        .leve-info {
+            @include vertical(middle);
+        }
+
+        .leve-box {
+            display: block;
+            margin-right: 35px;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            background: url('../img/common/safety-leve.png') no-repeat center;
+            background-size: 100%;
+        }
+
+        .leve-text {
+            display: block;
+            margin-right: 35px;
+            text-align: center;
+            font-size: 20px;
+            color: $main;
+        }
+
+        .user-message,
+        .user-info {
+            margin-left: 15px;
+
+            @include vertical(middle);
+
+            p {
+                line-height: 28px;
+            }
+
+            .user-id {
+                color: $main;
+            }
+        }
+
+        .user-message {
+            float: left;
+        }
+
+        .user-fill {
+            margin: 20px 0;
+            border: solid $gray 1px;
+
+            p {
+                text-align: left;
+            }
+
+            .fill {
+                @include vertical(middle);
+                @include clearfix;
+
+                width: 33%;
+                padding: 30px 0;
+                text-align: center;
+            }
+
+            .fill + span {
+                box-sizing: border-box;
+                border-left: solid $gray 1px;
+            }
+
+            .icon-box {
+                //@include vertical(middle);
+                float: left;
+                width: 60px;
+                height: 60px;
+                margin-left: 42px;
+            }
+
+            .bshiming-off {
+                background: url('../img/icon/bIcon-shiming-off.png') no-repeat center;
+                background-size: 100%;
+            }
+
+            .bshiming-on {
+                background: url('../img/icon/bIcon-shiming-on.png') no-repeat center;
+                background-size: 100%;
+            }
+
+            .bidCard-off {
+                background: url('../img/icon/bIcon-idCard-off.png') no-repeat center;
+                background-size: 100%;
+            }
+
+            .bidCard-on {
+                background: url('../img/icon/bIcon-idCard-on.png') no-repeat center;
+                background-size: 100%;
+            }
+
+            .bcode-off {
+                background: url('../img/icon/bIcon-code-off.png') no-repeat center;
+                background-size: 100%;
+            }
+
+            .bcode-on {
+                background: url('../img/icon/bIcon-code-on.png') no-repeat center;
+                background-size: 100%;
+            }
+
+            .auth-title {
+                font-size: $fz-title;
+            }
+
+            .auth-text {
+                color: $text-gray;
+                font-size: $fz-small;
+            }
+
+            .auth {
+                @include vertical(middle);
+
+                width: 14px;
+                height: 14px;
+                margin-right: 4px;
+            }
+
+            span {
+                @include vertical(middle);
+            }
+
+            .no {
+                background: url('../img/icon/icon-tip.png') no-repeat center;
+                background-size: 100%;
+            }
+
+            .yes {
+                background: url('../img/icon/icon-yes.png') no-repeat center;
+                background-size: 100%;
+            }
+        }
+
+        .auth-list {
+            font-size: $fz-small;
+            color: $text;
+
+            li {
+                span {
+                    @include vertical(middle);
+                }
+
+                padding: 10px 20px;
+
+                span:first-child {
+                    width: 20%;
+                    display: inline-block;
+                    // *display: inline;
+                    // *zoom: 1; // width: 130px;
+                }
+            }
+
+            .bg-gray {
+                background: $bg-gray;
+            }
+
+            .auth-explain {
+                display: inline-block;
+                width: 49%;
+                color: #666;
+                // margin-left: 80px;
+            }
+
+            .handle {
+                display: inline-block;
+                width: 30%;
+                color: $hover;
+                text-align: right;
+            }
+
+            .handle-gray {
+                color: #666;
+            }
+        }
+
+        .more {
+            // margin-left: 20px;
+            cursor: pointer;
+            color: $main;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 4px;
+        }
+    } //输入框按钮公用样式
+    .center-tips {
+        display: none;
+    }
+
+    .center-remind {
+        @include vertical(middle);
+
+        color: #666;
+        padding-left: 24px;
+
+        &:before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+            position: relative;
+            top: -1px;
+            background: url("../img/icon/icon-tip.png") left center no-repeat;
+            background-size: 16px;
+        }
+    }
+
+    .cange-password {
+        margin: 40px 0 0 50px;
+
+        li {
+            margin-top: 12px;
+        }
+
+        .min-topli {
+            margin-top: 6px;
+        }
+
+        span {
+            display: inline-block;
+            min-width: 240px;
+            line-height: 40px;
+            text-align: right;
+            margin-right: 6px;
+        }
+
+        input {
+            display: inline-block;
+            vertical-align: top;
+            width: 248px;
+            height: 38px;
+            padding: 0 10px;
+            font-size: 16px;
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+        }
+
+        .prompt {
+            height: 19px;
+            color: #ff3127;
+            margin-left: 244px;
+        }
+
+        .cange-submit {
+            min-width: 178px;
+            line-height: inherit;
+            margin: 0 auto 0 244px;
+            padding: 9px 50px;
+            font-size: 18px;
+        }
+    } //找回交易密码
+    .center-right-back {
+        .verification-input {
+            width: 104px;
+        }
+
+        .verification-code {
+            width: 140px;
+            height: 38px;
+            line-height: 38px;
+            vertical-align: top;
+        }
+
+        .click-out {
+            background: #ccc;
+        }
+    } //认证信息
+    .center-right-authentication {
+        .hidden {
+            display: none;
+        }
+
+        .message {
+            width: 200px !important;
+            text-align: left !important;
+        }
+
+        .remind-box {
+            margin-bottom: 40px;
+        }
+
+        .message-center {
+            .real-name {
+                //margin-left: 200px;
+            }
+        }
+
+        img {
+            width: 75px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+
+        .message-state {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .renmind-p {
+            margin-bottom: 50px;
+            font-size: 14px;
+            color: #999;
+        }
+
+        .resubmit-box {
+            width: 100%;
+            margin-left: -120px;
+            text-align: center;
+        }
+
+        .resubmit {
+            margin: 0 auto 0 240px;
+            padding: 10px 50px;
+            font-size: 18px;
+        }
+
+        .tip-btn {
+            display: inline-block;
+            margin: 0 auto 0 240px;
+            padding: 10px 50px;
+            background: #dba510;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+        }
+    }
+}
+
+.vi,
+.en {
+    .auth-title {
+        text-align: center !important;
+    }
+
+    .user-message {
+        float: none !important;
+        margin: 15px auto 0 !important;
+    }
+
+    .icon-box {
+        float: none !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+}

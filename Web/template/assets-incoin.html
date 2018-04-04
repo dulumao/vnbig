@@ -1,0 +1,107 @@
+<div class="incoin">
+	<p class="center-title lang-title">转入虚似币</p>
+	<div class="select-box">
+		<div class="div-select" id="coinType">
+			<i></i>
+			<cite selectid="1"></cite>
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+		<p class="select_p"><span class="lang-items" index="0">可用虚似币</span>：<em class="coinNum green" id="useNum">0</em></p>
+		<p class="select_p"><span class="lang-items" index="2">冻结虚似币</span>：<em class="coinNum orange" id="freezeNum">0</em></p>
+	</div>
+	<div class="moneyBox">
+		<p>
+			<span class="lang-items" index="4">这是您的钱包地址，请将您的&nbsp;</span>
+			<em class="coinName coin-name">-</em>&nbsp;
+			<span class="lang-items" index="5">转入此地址：</span>
+		</p>
+		<h3 class="orange" id="coinAddress"></h3>
+		<div class="ewmBox">
+			<img src="/Web/images/ewm.jpg" id="coinErcode">
+			<p>
+				<span class="coin-name"></span>
+				<span class="lang-items" index="6">钱包地址</span>
+			</p>
+		</div>
+	</div>
+	<div class="explainBox">
+		<p class="lang-explain" index="0">转入说明：</p>
+		<p>
+		    <span class="lang-explain" index="1">
+		        1. 转入是自动的，
+		    </span>
+					<span class="coin-name">
+		        -
+		    </span>
+					<span class="lang-explain" index="2">
+		        转账需要整个
+		    </span>
+					<span class="coin-name coin-name-hide">
+		        -
+		    </span>
+					<span class="lang-explain" index="3">
+		        网络进行确认，达到 3 个确认后您的
+		    </span>
+					<span class="coin-name">
+		        -
+		    </span>
+					<span class="lang-explain" index="4">
+		        会自动充值到您的账户中
+		    </span>
+				</p>
+				<p>
+		    <span class="lang-explain" index="5">
+		        2. 此地址是您唯一且独自使用的转入地址，您可以同时进行多次充值，也可将此地址做为您在矿池的付款地址
+		    </span>
+				</p>
+				<p class="orange">
+		    <span class="lang-explain" index="6">
+		        3. 本地址禁止充值除
+		    </span>
+					<span class="coin-name">
+		        -
+		    </span>
+					<span class="lang-explain" index="7">
+		        之外的其他资产 任何其他资产充值将不可找回
+		    </span>
+		</p>
+	</div>
+
+	<div class="record-box">
+		<div class="info_list_title">
+			<h3 class="lang-box" index="0">转入记录</h3>
+		</div>
+		<table class="table" id="history">
+			<colgroup>
+				<col width="10%">
+				<col width="20%">
+				<col width="20%">
+				<col width="10%">
+				<col width="20%">
+				<col width="10%">
+			</colgroup>
+			<thead>
+			<tr>
+				<th  class="lang-box" index="1">记录ID</th>
+				<th  class="lang-box" index="2">实付</th>
+				<th  class="lang-box" index="3">到账</th>
+				<th  class="lang-box" index="4">确认数</th>
+				<th  class="lang-box" index="5">发送时间</th>
+				<th  class="lang-box" index="6">状态</th>
+			</tr>
+			</thead>
+			<tbody>
+				<!--<tr>
+					<td>1</td>
+					<td>1</td>
+					<td>110</td>
+					<td>1</td>
+					<td>110</td>
+					<td>10</td>
+				</tr>-->
+			</tbody>
+		</table>
+	</div>
+</div>

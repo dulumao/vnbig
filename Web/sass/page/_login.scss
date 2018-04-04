@@ -1,0 +1,221 @@
+//登录部分
+.login-content {
+    width: 100%;
+    overflow: hidden;
+
+    & > p {
+        width: $width;
+        margin: auto;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        height: 106px;
+        line-height: 145px;
+        color: #000;
+        font-size: 38px;
+    }
+
+    .bg-container {
+        overflow: hidden;
+        width: 100%;
+        min-width: 1200px;
+        //background: #d9f0f8;
+
+        .form-warp {
+            width: 1000px;
+            margin: auto;
+            padding: 40px 0 60px;
+            overflow: hidden;
+
+            .form-cont {
+                width: 50%;
+                padding: 15px 0 20px;
+
+                .title-heading {
+                    color: #000;
+                }
+
+                .input-list {
+                    overflow: hidden;
+
+                    li {
+                        margin-top: 18px;
+                        position: relative;
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+
+                        .input-heading {
+                            color: #666;
+                            font-size: $fz-main;
+                            margin-bottom: 5px;
+                        }
+
+                        input {
+                            width: 398px;
+                            height: 46px;
+                            font-size: $fz-main;
+                            padding-left: 15px;
+                            border: 1px solid #dcdcdc;
+                            border-radius: 3px;
+
+                            &.addLong {
+                                width: 278px;
+                            }
+                        }
+
+                        .code-text {
+                            display: inline-block;
+                            width: 108px;
+                            height: 44px;
+                            line-height: 44px;
+                            text-align: center;
+                            border: 1px solid #dcdcdc;
+                            border-radius: 3px;
+                            margin-left: 5px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .warring-content {
+                    height: 25px;
+                    line-height: 25px;
+                    color: #ff7519;
+                }
+
+                .login {
+                    display: inline-block;
+                    width: 280px;
+                    height: 48px;
+                    line-height: 48px;
+                    text-align: center;
+                    background: $main-sub;
+                    border-radius: 3px;
+                    color: #fff;
+                    font-size: 20px;
+                    &:hover {
+                        opacity: .9;
+                        color: #fff !important;
+                    }
+                }
+
+                .to-forgetPwd {
+                    display: inline-block;
+                    width: 120px;
+                    text-align: center;
+                    font-size: $main-sub;
+                    color: #006885;
+                }
+            }
+
+            .none-account {
+                color: #000;
+
+                .title-heading {
+                    color: $title;
+                    margin-bottom: 10px;
+                }
+
+                .title-desc {
+                    color: #666;
+                    margin-bottom: 25px;
+                }
+
+                .cread-account {
+                    color: $main-sub;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.rest-passwrod{
+    .form-box{
+        padding-top: 20px;
+
+
+        .list{
+            margin-bottom: 20px;
+            overflow: hidden;
+
+            &:first-child{
+                margin-bottom: 10px;
+            }
+        }
+        label{
+            height: 36px;
+            line-height: 36px;
+            width: 160px;
+            text-align: right;
+            margin-right: 12px;
+            float: left;
+        }
+        .text{
+            line-height: 36px;
+        }
+        .input{
+            width: 250px;
+            padding: 4px 10px;
+            height: 36px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background: #fff;
+            font-size: 14px;
+            color: #666;
+            float: left;
+            vertical-align: middle;
+
+            &.code{
+                width: 120px;
+            }
+        }
+        .get-code{
+            width: 118px;
+            height: 36px;
+            line-height: 36px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .submit{
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+        .tips{
+            padding-left: 172px;
+            margin: -14px 0 6px 0;
+            visibility: hidden;
+            color: #f00;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

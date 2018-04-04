@@ -1,0 +1,44 @@
+$version:                   20170823 !default;
+
+/* The current site project specification */
+
+/* Font
+   ========================================================================== */
+
+/* family */
+$font-family:'Microsoft YaHei',Arial,Tahoma,Roboto;
+
+/* bg color */
+$body-bg:#0685aa !default;
+$dark-bg:#252c34 !default;
+$bg-gray:#fafafa !default; //背景灰色
+$bg-blue: #d9f0f8 !default; //l标题以及登录注册页面的蓝色背景
+
+/* Font
+   ========================================================================== */
+
+/* size */
+$fz-small:12px !default; //最小字号
+$fz-big:32px !default; //大字号s
+$fz-main: 14px !default; //正文字体大小
+$fz-nav: 12px !default; //头部分类导航字体
+$fz-title: 16px !default; //标题
+
+/* color */
+$main:#dba510 !default; //网站主色调橙色
+$main-sub: #006885 !default; //网站次要色调绿色
+$title:#333 !default; //网站标题颜色
+$text:#333 !default; //网站字体主色调
+$text-gray:#aaa !default; //灰色文字
+$gray:#e3e3e3 !default; //灰色
+$gray-light:#efefef !default; //亮灰色
+$select-line:#f9f2dd !default; //列表行选中背景色
+$hover:#dba510 !default; //字体悬停颜色
+$white:#fff !default;//白色
+$error: #dba510 !default; //错误提示色
+$gap-color: #f6faff !default; //列表间隔颜色
+$i18n-rise-color: #690 !default; //国际上涨颜色
+$i18n-drop-color: #e55600 !default; //国际下跌颜色
+
+/* 布局 */
+$width: 1200px !default; //网站宽度

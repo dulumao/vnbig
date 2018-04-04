@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        @@include('./inc/meta.inc')
+    </head>
+    <body>
+        <!--header-->
+        @@include('./inc/header.inc')
+        <!--center-->
+        <div class="bg_fff">
+            <div class="main" style="padding:30px 0;">
+                <!-- @@include('./inc/detailsCom.inc') -->
+                <!--tab 切换 -->
+                <div class="pagebox auto">
+                    <ul id="newsList">
+                        <!-- <li class="border-none"><a href="newlist-info.html" target="_blank">
+                            <h3>
+                                <span>2017-08-29</span>
+                                <i>[LTC]市值190亿，均价60刀，这就是LTC</i>
+                            </h3>
+                            <p>正如莱特币创始人CharlieLee所说，莱特币已经突破了两大“里程碑”，单价首次突破60美元，市值首次突破30亿美元。根据Coinmarketcap上周日数据显示，基于中国和韩国交易量，莱特币创下了四年最佳。截止发稿时，莱特币市值已经达到了近32亿美元，同时交易所平均价格达到了61.5美元，与周日历史新高相比略微下跌。</p>
+                        </a></li>
+                        <li><a href="newlist-info.html" target="_blank">
+                            <h3>
+                                <span>2017-08-29</span>
+                                <i>[LTC]市值190亿，均价60刀，这就是LTC</i>
+                            </h3>
+                            <p>正如莱特币创始人CharlieLee所说，莱特币已经突破了两大“里程碑”，单价首次突破60美元，市值首次突破30亿美元。根据Coinmarketcap上周日数据显示，基于中国和韩国交易量，莱特币创下了四年最佳。截止发稿时，莱特币市值已经达到了近32亿美元，同时交易所平均价格达到了61.5美元，与周日历史新高相比略微下跌。</p>
+                        </a></li> -->
+                    </ul>
+                    <div class="page-box" id="pageTurn"></div>
+                </div>
+            </div>
+        </div>
+        <!--header-->
+        @@include('./inc/footer.inc')
+        <!--center-->
+        @@include('./inc/js.inc')
+        <!-- build:js ./Web/js/newslist.min.js -->
+        <script src="./Web/js/common/page.turn.js"></script>
+        <script src="./Web/js/page/newslist.js"></script>
+        <!-- endbuild -->
+        @@include('./inc/statis.inc')
+    </body>
+</html>

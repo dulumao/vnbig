@@ -1,0 +1,193 @@
+//注册部分
+.register-content {
+    width: 100%;
+    //height: 600px;
+    overflow: hidden;
+    .heading-text {
+        width: 100%;
+        min-width: $width;
+        background: #fff;
+        text-align: center;
+        margin: auto;
+        height: 180px;
+        @include clearfix();
+        & > p {
+            margin: 50px 0 15px;
+            color: #000;
+            font-size: 38px;
+        }
+        & > i {
+            font-size: $fz-main;
+        }
+    }
+    .bg-container {
+        overflow: hidden;
+        width: 100%;
+        min-width: $width;
+        background: $bg-blue;
+        .form-warp {
+            width: 1000px;
+            margin: auto;
+            background: $bg-blue;
+            padding: 60px 0;
+            overflow: hidden;
+            .form-cont {
+                width: 50%;
+                &:first-child {
+                    border-right: 1px solid #dcdcdc;
+                }
+                .title-heading {
+                    color: #000;
+                    font-size: 24px;
+                }
+                .input-list {
+                    li {
+                        margin-top: 16px;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        .input-heading {
+                            display: inline-block;
+                            width: 130px;
+                            color: #666;
+                            font-size: $fz-main;
+                        }
+                        input, select {
+                            width: 320px;
+                            height: 30px;
+                            font-size: $fz-main;
+                            padding-left: 15px;
+                            &.input-code {
+                                width: 170px;
+                            }
+                        }
+                        .code-text {
+                            display: inline-block;
+                            width: 138px;
+                            height: 28px;
+                            background: #006885;
+                            line-height: 28px;
+                            text-align: center;
+                            color: #fff;
+                            margin-left: 6px;
+                            cursor: pointer;
+                        }
+                        .code-txt{
+                            display: inline-block;
+                            width: 138px;
+                            height: 28px;
+                            line-height: 28px;
+                            text-align: center;
+                            cursor: pointer;
+                            margin-left: 6px;
+                        }
+
+                        .pic {
+                            height: 28px;
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+                    }
+                }
+                .hint {
+                    width:454px;
+                    color: #b2b2b2;
+                    font-size: 14px;
+                    margin-top: 6px;
+                    .agree-box{
+                        @include vertical(sub);
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 5px;
+                        border: 1px solid $gray;
+                        background-color: $white;
+                        cursor: pointer;
+                    }
+                    .tick{
+                        background-image: url('../img/icon/tick.png');
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        background-position: center;
+                    }
+                    .use-clause {
+                        color: #5e8ae4;
+                    }
+                    .phone-register {
+                        color: #5e8ae4;
+                        float: right;
+                    }
+                }
+                .warring-content {
+                    width: 453px;
+                    min-height: 25px;
+                    line-height: 25px;
+                    color: #ff7519;
+                    //display: none;
+                }
+                .register {
+                    display: block;
+                    width: 453px;
+                    height: 43px;
+                    line-height: 43px;
+                    text-align: center;
+                    background: #000;
+                    background: $main;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    border-radius: 3px;
+                    border: 1px solid #a57b08;
+                    color: #382503;
+                    font-size: 20px;
+                    &:hover{
+                        background:$main;
+                        color: #382503 !important;
+                    }
+                }
+                .to-login {
+                    font-size: $fz-main;
+                    color: #006885;
+                    margin-top: 4px;
+                }
+            }
+            .none-account {
+                padding-left: 45px;
+                p {
+                    margin-bottom: 30px;
+                    font-size: 14px;
+                    color: #666;
+                    line-height: 22px;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

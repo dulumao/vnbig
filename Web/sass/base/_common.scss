@@ -1,0 +1,352 @@
+
+/* normalize
+   ========================================================================== */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+input {
+    outline: none;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+/* Location
+   ========================================================================== */
+//text align
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+//object float
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+@mixin clearfix() {
+    & {
+        *zoom: 1;
+    }
+
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+//对齐方式
+@mixin vertical($location) {
+    display: inline-block;
+    vertical-align: $location;
+}
+
+//object position
+.pab {
+    position: absolute;
+}
+
+.pab-tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pab-tr {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pab-bl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.pab-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+//绝对定位
+@mixin absolute($direction) {
+    position: absolute;
+
+    @if $direction ==top {
+        top: 0;
+    }
+
+    @else if $direction == bottom {
+        bottom: 0;
+    }
+
+    @else if $direction == right {
+        right: 0;
+    }
+
+    @else if $direction == left {
+        left: 0;
+    }
+}
+
+//设置字体
+@mixin fz($num) {
+    font-size: ($num)+px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+//设置文字超出显示
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//设置箭头
+@mixin arrows($width,$height,$color,$direction) {
+    content: '';
+    width: $width;
+    height: $height;
+    border-top: solid 1px $color;
+    border-right: solid 1px $color;
+
+    @if $direction ==top {
+        transform: rotate(-45deg);
+        filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483)";
+    }
+
+    @else if $direction ==right {
+        transform: rotate(45deg);
+        filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474)";
+    }
+
+    @else if $direction ==bottom {
+        transform: rotate(135deg);
+        filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.7071067811865477, M12=-0.7071067811865475, M21=0.7071067811865475, M22=-0.7071067811865477)";
+    }
+
+    @else if $direction ==left {
+        transform: rotate(-90deg);
+        filter: "progid:DXImageTransform.Microsoft.Matrix(M11=3.061616997868383e-16, M12=1, M21=-1, M22=3.061616997868383e-16)";
+    }
+}
+
+//设置图片
+@mixin seticonbg($img, $onoff) {
+    background: url('#{$img}-#{$onoff}.png') center no-repeat;
+}
+
+//输入框错误样式
+.inputError {
+    border: 2px solid $error !important;
+}
+
+//错误提示
+.mess-info {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, .5);
+    z-index: 9999;
+    text-align: center;
+    height: 100%;
+}
+
+.mess-info .mess-tip {
+    display: inline-block;
+    margin: -20px auto 0;
+    border-radius: 10px;
+    line-height: 35px;
+    padding: 10px 50px;
+    color: #fff;
+    font-size: 15px;
+    background: rgba(0, 0, 0, .8);
+    position: relative;
+    top: 50%;
+}
+//隐藏鼠标
+.mouse-hide {
+    cursor: none;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+input::-ms-reveal {
+    display: none;
+}
+//输入框提示
+.input-tip-box {
+    display: inline-block;
+    position: relative;
+
+    .input-tip {
+        position: absolute;
+        top: 0;
+        left: 14px;
+        line-height: 46px;
+        color: $text-gray;
+        font-size: $fz-small;
+    }
+}
+
+.gray {
+    color: $text-gray !important;
+}
+
+.rise {
+    color: $i18n-rise-color;
+}
+
+.drop {
+    color: $i18n-drop-color;
+}
+
+.text-center {
+    text-align: center;
+}
+//大背景白色
+.bg_fff {
+    background: $white;
+}
+
+.green {
+    color: $i18n-rise-color !important;
+}
+
+.orange {
+    color: $i18n-drop-color !important;
+}
+
+//主色调按钮
+.main-btn {
+    background: $main-sub;
+    border: 1px solid $main-sub;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+
+    &:hover {
+        opacity: .9;
+    }
+
+    &:disabled {
+        background: #999;
+        border-color: #999;
+        color: #fff;
+        cursor: default;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    word-wrap: break-word;
+}
+
+input:disabled {
+    cursor: not-allowed;
+}
+
+::placeholder {
+    color: #aaa;
+}
+
+::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.btn-loading {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    animation: ring 1s ease-in-out infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+
+    i {
+        width: 20px;
+        height: 10px;
+        border-radius: 10px 10px 0 0;
+        border: 2px solid #fff;
+        border-bottom: 0;
+        box-sizing: border-box;
+        display: block;
+    }
+}
+
+@keyframes ring {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+input[newpassword] {
+    -webkit-text-security: disc;
+    text-security: disc;
+    font-family: Arial, sans-serif;
+}

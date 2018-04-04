@@ -1,0 +1,295 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+.header-container {
+    @include clearfix();
+
+    height: 60px;
+    width: 100%;
+    min-width: $width;
+    background: #006885;
+
+    .header-left {
+        float: left;
+    }
+
+    .header-right {
+        float: right;
+    }
+
+    .logo {
+        display: block;
+        width: 190px;
+        padding: 15px 0;
+        text-align: center;
+        font-size: 0;
+        float: left;
+        background: #015f79;
+
+        img {
+            width: 127px;
+            height: 29px;
+        }
+    }
+
+    .header-nav {
+        float: left;
+
+        li {
+            display: block;
+            border-left: solid #00708f 1px;
+            border-right: solid #015972 1px;
+            background: $main-sub;
+            float: left;
+
+            a {
+                display: block;
+                padding: 0 25px;
+                line-height: 60px;
+                color: $white;
+            }
+        }
+
+        .selected,
+        li:hover {
+            background: #0685aa !important;
+        }
+
+        .selected a,
+        li:hover a {
+            color: $white !important;
+        }
+    }
+
+    .header-login,
+    .lang-choose {
+        float: left;
+    }
+
+    .header-login {
+        padding-right: 20px;
+        color: $white;
+        line-height: 60px;
+        border-right: solid #015972 1px;
+
+        a {
+            text-decoration: underline !important;
+            color: $white;
+        }
+    }
+
+    .money-choose {
+        width: 80px;
+        float: left;
+        font-family: Arial, Tahoma, Roboto;
+        border-left: 1px solid #00708f;
+        position: relative;
+        height: 60px;
+        display: none;
+
+        .current {
+            line-height: 60px;
+            color: #fff;
+            text-align: center;
+            display: block;
+            cursor: pointer;
+
+            em {
+                vertical-align: middle;
+                display: inline-block;
+                margin-right: 4px;
+            }
+        }
+
+        .choose-box {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: -1px;
+            background: $white;
+            border: 1px solid $gray;
+
+            li {
+                width: 80px;
+                padding: 7px 15px;
+                border-top: 1px solid $gray;
+                cursor: pointer;
+
+                &:first-child {
+                    border-top: 0;
+                }
+
+                &:hover {
+                    background: $gray;
+                }
+            }
+        }
+    }
+
+    .lang-choose {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .now-lang {
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 20px;
+        text-align: center;
+        border-left: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    .lang-icon, .lang-arrow {
+        @include vertical(middle);
+    }
+
+    .lang-icon {
+        width: 22px;
+        height: 15px;
+        margin-right: 10px;
+    }
+
+    .lang-arrow {
+        @include arrows(5px,5px, $white, bottom);
+    }
+
+    .icon-zh {
+        background: url('../img/icon/zh.png') center no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .icon-ct {
+        background: url('../img/icon/ct.png') center no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .icon-vi {
+        background: url('../img/icon/vi.png') center no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .icon-en {
+        background: url('../img/icon/en.png') center no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .hander-lang-box {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 5px;
+        background: $white;
+        border: 1px solid $gray;
+
+        li {
+            width: 134px;
+            padding: 5px 15px;
+            border-top: 1px solid $gray;
+            cursor: pointer;
+
+            &:first-child {
+                border-top: 0;
+            }
+
+            &:hover {
+                background: $gray;
+            }
+        }
+    }
+}
+
+.customer-service {
+    position: fixed;
+    z-index: 10;
+    right: 20px;
+    bottom: 60px;
+    background: #006885;
+    border-radius: 50px;
+    padding: 13px 22px;
+    cursor: pointer;
+
+    .customer-btn {
+        height: 21px;
+
+        .icon {
+            display: inline-block;
+            width: 22px;
+            height: 21px;
+
+            @include bgImg('icon/customer-icon.png');
+        }
+
+        .name {
+            font-size: 15px;
+            font-family: sans-serif;
+            color: #fff;
+            line-height: 21px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 6px;
+        }
+    }
+
+    .customer-center {
+        display: none;
+        position: absolute;
+        left: -452px;
+        top: -190px;
+        border: 1px solid #dcdcdc;
+        background: #fff;
+        padding: 0 15px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 440px;
+            top: 205px;
+            width: 8px;
+            height: 14px;
+            @include bgImg('icon/customer-triangle.png');
+        }
+
+        .title {
+            width: 410px;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 20px 0;
+        }
+
+        .code-box {
+            @include clearfix;
+
+            img {
+                float: left;
+                width: 135px;
+                height: 135px;
+                padding: 0 30px;
+            }
+
+            .img-dashed {
+                float: left;
+                width: 1px;
+                height: 124px;
+                margin-top: 6px;
+                border-right: 1px dashed #c6c6c6;
+            }
+        }
+
+        .customer-name {
+            color: #666;
+
+            span {
+                display: inline-block;
+                width: 135px;
+                margin: 15px 30px;
+                line-height: 16px;
+                text-align: center;
+            }
+        }
+    }
+}

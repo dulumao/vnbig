@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> @@include('./inc/meta.inc')
+</head>
+<body>
+    <!--header-->
+    @@include('./inc/header.inc')
+    <!--center-->
+    <div class="bg_fff">
+        <div class="safety-container">
+            <div class="location-box"><span class="lang-indexPage">首页</span><i>></i><span class="location lang-safetyCenter">安全中心</span></div>
+            <div class="center-box">
+                <div class="center-left">
+                    <ul class="center-list" id="centerList">
+                        <li srcurl="center">
+                            <i class="icon safety"></i><em class="lang-itemList" index="0">安全中心</em><i class="arrows">></i>
+                        </li>
+                        <li srcurl="authentication">
+                            <i class="icon shiming"></i><em class="lang-itemList" index="1">实名认证</em><i class="arrows">></i>
+                        </li>
+                        <li srcurl="idCard">
+                            <i class="icon idCard"></i><em class="lang-itemList" index="2">照片认证</em><i class="arrows">></i>
+                        </li>
+                        <li srcurl="login">
+                            <i class="icon code1"></i><em class="lang-itemList" index="3">修改登录密码</em><i class="arrows">></i>
+                        </li>
+                        <li srcurl="transaction">
+                            <i class="icon code2"></i><em class="lang-itemList" index="4">修改交易密码</em><i class="arrows">></i>
+                        </li>
+                        <li srcurl="back">
+                            <i class="icon code2"></i><em class="lang-itemList" index="5">找回交易密码</em><i class="arrows">></i>
+                        </li>
+                        <li srcurl="withdraw">
+                            <i class="icon code2"></i><em class="lang-itemList" index="6">修改提现密码</em><i class="arrows">></i>
+                        </li>
+                        <li srcurl="backWithdraw">
+                            <i class="icon code2"></i><em class="lang-itemList" index="7">找回提现密码</em><i class="arrows">></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="center-right">
+                    <div id="centerRight" class="hidden"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    @@include('./inc/footer.inc')
+    @@include('./inc/js.inc')
+    <!-- build:js ./Web/js/safety.min.js -->
+    <script src="./Web/js/common/beas64.js"></script>
+    <script src="./Web/js/page/safety/center.js"></script>
+    <script src="./Web/js/page/safety/authentication.js"></script>
+    <script src="./Web/js/page/safety/idCard.js"></script>
+    <script src="./Web/js/page/safety/loginPwd.js"></script>
+    <script src="./Web/js/page/safety/transaction.js"></script>
+    <script src="./Web/js/page/safety/back.js"></script>
+    <script src="./Web/js/page/safety/withdraw.js"></script>
+    <script src="./Web/js/page/safety/backWithdraw.js"></script>
+    <script src="./Web/js/page/safety/safety.js"></script>
+    <!-- endbuild -->
+    @@include('./inc/statis.inc')
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    @@include('./inc/meta.inc')
+</head>
+<body>
+<!--header-->
+@@include('./inc/header.inc')
+<!--center-->
+<div class="wpaper-container">
+    <div class="banner-container">
+        <div class="main-content">
+            <div class="coin-name">
+                <p>Vietnam Coin（VNC）</p>
+                <span class="lang-banContent" index="0">VNBIG TOKEN</span>
+            </div>
+            <div class="progress-area">
+                <div class="now-num" id="nowNum">
+                    ---VNC (--%)
+                </div>
+                <div class="pro-content">
+                    <span class="done-pro" id="donePro"></span>
+                    <span class="bg-pro" id="totaoPro"></span>
+                </div>
+                <div class="show-num">
+                    <span class="lf">0 VNC</span>
+                    <span class="rt"><span id="totalNum">---</span> VNC</span>
+                </div>
+            </div>
+            <div class="login-show" id="loginShow">
+                <div class="wallet-address hidden">
+                    <div class="lf">
+                        <div class="address-img lf">
+                            <img class="img" src="./web/images/erweima.png" id="addressImg"/>
+                        </div>
+
+                        <div class="address-code lf">
+                            <span class="lang-banContent" index="8">ETH地址</span>
+                            <div class="address-detail" id="addressDetail">---</div>
+                            <span class="des-text lang-banContent" index="1">（已在交易所存储的ETH可使用提现功能转出）</span>
+                        </div>
+                    </div>
+                    <div class="charge-handle lf">
+                        <div class="charge-num">
+                            <span class="lang-banContent" index="9">
+                            已充值&nbsp;
+                            </span>
+                            <em id="chargeMon"> --- </em>
+                            &nbsp;ETH
+                            <span class="hint"> (<span class="lang-banContent" index="10">每个用户最多认购 </span>20 ETH)</span>
+                        </div>
+                        <button class="offerto-buy hidden lang-banContent disabled" disabled index="11" id="offerBuy">确认认购</button>
+                        <p class="subscribe-num hidden" id="subscribeNum">
+                            <span class="lang-banContent" index="12">已认购</span> <span class="have-sub">---</span>
+                            ETH
+                        </p>
+                    </div>
+                </div>
+                <div class="wallet-address hidden">
+                    <a href="javascript:;" class="participate-in lang-banContent" index="7" id="goLogin">
+                        立即参与
+                    </a>
+                </div>
+            </div>
+            <div class="count-down">
+                <p index="2" id="countText">---</p>
+                <div class="time-container">
+                    <ul class="time-list" id="timeList">
+                        <li>
+                            <div class="time-item" id="dayTime">--</div>
+                            <span class="lang-banContent" index="3">天</span>
+                        </li>
+                        <li>
+                            <div class="">：</div>
+                            <span></span>
+                        </li>
+                        <li>
+                            <div class="time-item" id="hourTime">--</div>
+                            <span class="lang-banContent" index="4">小时</span>
+                        </li>
+                        <li>
+                            <div class="">：</div>
+                            <span></span>
+                        </li>
+                        <li>
+                            <div class="time-item" id="minTime">--</div>
+                            <span class="lang-banContent" index="5">分钟</span>
+                        </li>
+                        <li>
+                            <div class="">：</div>
+                            <span></span>
+                        </li>
+                        <li>
+                            <div class="time-item" id="secondTime">--</div>
+                            <span class="lang-banContent" index="6">秒</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="market-share">
+        <div class="share-container">
+            <p class="col-title lang-allotContent" index="0">VNC 代币发行分配</p>
+            <div class="share-detail">
+                <div class="lf list">
+                    <ul class="list-detail">
+                        <li class="lang-allotContent" index="1">团队持有: 50%</li>
+                        <li class="lang-allotContent" index="2">市场推广: 15%</li>
+                        <li class="lang-allotContent" index="3">早期投资者: 10%</li>
+                        <li class="lang-allotContent" index="4">公开发行: 25%</li>
+                    </ul>
+                    <a href="javascript:;" target="_blank" class="download-wpaper lang-allotContent" index="5"
+                       id="downloadWpaper">下载白皮书</a>
+                </div>
+                <div class="rt pie-chart" id="pieChart"></div>
+            </div>
+            <div class="buy-back">
+                <p class="lang-allotContent" index="6">VNC 代币回购机制</p>
+                <span class="lang-allotContent" index="7">在平台部署在线上正式投入运营后，每季度将平台净利润的 40%用于回购 VNC 代币，回购后的 VNC 代币会进行销毁处理，直至平台上的 VNC 代币流通总量为10 亿为止。</span>
+            </div>
+        </div>
+    </div>
+
+    <!--发行计划-->
+    <div class="vnc-plan">
+        <div class="plan-content">
+            <h3 class="plan-h3 lang-planTitle">VNC 发行计划</h3>
+            <div class="auto-box">
+                <ul class="plan-item" id="planItem">
+                    <li>
+                        <p class="plan-text text-height lang-planText" index="0">本次 VNBIG
+                            代币发行将于2018年1月18日20:00(北京时间)在区块链项目发行官网开始发售。</p>
+                    </li>
+                    <li>
+                        <p class="plan-text lang-planText" index="1">众筹发行支持币种：</p>
+                        <span class="lang-planText" index="2">以太坊 (ETH)</span>
+                    </li>
+                    <li class="plan-text  lang-planText">
+                        <p class="lang-planText" index="3">白名单注册会员制：</p>
+                    </li>
+                    <li class="plan-text">
+                        <p class="lang-planText" index="4">白名单会员需在2018年1月16日开始申请，保有</p><span class="lang-planText"
+                                                                                             index="5">20ETH 额度</span>
+                    </li>
+                    <li class="plan-text">
+                        <p class="lang-planText" index="6">第一轮兑换（2018年1月18日-1月20日）：</p><span class="lang-planText"
+                                                                                             index="7">1ETH 兑换 40000VNC</span>
+                    </li>
+                    <li class="plan-text">
+                        <p class="lang-planText" index="8">第二轮兑换（2018年1月21日-1月28日）：</p><span class="lang-planText"
+                                                                                             index="9">1ETH 兑换 36000VNC</span>
+                    </li>
+                    <li class="plan-text">
+                        <p class="lang-planText" index="10">发行 VNC 兑完即止。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--OTC 场外交易与期货功能-->
+    <div class="oct-trade">
+        <div class="trade-content">
+            <h3 class="trade-h3 lang-tradeH3">OTC 场外交易与期货功能</h3>
+            <ul class="trade-content">
+                <li class="content-left">
+                    <img src="web/img/common/oct-trade.png">
+                    <p class="content-title lang-tradeTitle" index="0">OTC 场外交易</p>
+                    <p class="content-section lang-tradeText" index="0">Vnbig 拟开通人民币及美元对数字货币的直接交易渠道与交易，
+                        在平台上，用户和投资人直接买卖所有区块链数字资产，平台拥有极高信用保障和强力技术支撑，保证能快速、安全买入所有数字币并进行法币的充值与提现。</p>
+                </li>
+                <li class="content-right">
+                    <img src="web/img/common/lever-trade.png">
+                    <p class=" content-title lang-tradeTitle" index="1">杠杆交易功能</p>
+                    <p class="content-section lang-tradeText" index="1">Vnbig
+                        拟开通指数合约的交易功能，平台用户在这里交易指定区块链数字资产现货及衍生资产。设置事前和事中的止损设置，预警设置，以实现完整的交易流程和拓展。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--VNBIG 简介-->
+    <div class="vn-synopsis">
+        <div class="vn-synopsis-content">
+            <div class="synopsis-top">
+                <h3 class="lang-synopsisH3" index="0">VNBIG 简介</h3>
+                <p class="synopsis-text top-distance lang-synopsisText" index="0">VNBIG
+                    区块链资产交易平台依托潜力巨大的东南亚交易市场，向全球范围内的用户和投资人提供一个全流程、
+                    易操作、具备高信任保障的区块链资产的交易平台。区块链技术和以其相互依存的金融体系将是未来行业发展的大趋势，所以想借助时代契机，助力整个区块链应用及商业市场。</p>
+            </div>
+            <div class="synopsis-min">
+                <h3 class="lang-synopsisH3" index="1">VNBIG 优点</h3>
+                <ul class="synopsis-item">
+                    <li class="synopsis-list">
+                        <div class="list-left">
+                            <p class="synopsis-title lang-synopsisTitle" index="0">高性能支持</p>
+                            <p class="synopsis-text lang-synopsisText" index="1">VNBIG 交易系统采用内存撮合技术， 使用AWS
+                                亚马逊云强大的运维体系，支持高并发访问， 确保高速度的订单处理能力以及交易时效，
+                                保证在处理订单时不会出现任何延时和卡顿。</p>
+                        </div>
+                        <div class="list-right">
+                            <p class="synopsis-title lang-synopsisTitle" index="1">安全稳定</p>
+                            <p class="synopsis-text lang-synopsisText" index="2">VNBIG
+                                采用了先进的多层、多集群系统架构。多层层架构的设计大幅提高了系统的性能、安全性、稳定性和扩展性。功能部署、版本更新无需停机进行。
+                                同时VNBIG 采用交易与储存分离设计， 可以多维确认交易， 最大限度保障终端用户的操作体验。</p>
+                        </div>
+                    </li>
+                    <li class="synopsis-list">
+                        <div class="list-left">
+                            <p class="synopsis-title lang-synopsisTitle" index="2">支持币种</p>
+                            <p class="synopsis-text lang-synopsisText" index="3">在交易初期， 我们将提供对以下币种的支持：</p>
+                            <ul class="currency-item">
+                                <li class="currency-list lang-currencyList" index="0">BTC</li>
+                                <li class="currency-list lang-currencyList" index="1">ETH</li>
+                                <li class="currency-list lang-currencyList" index="2">LTC</li>
+                                <li class="currency-list lang-currencyList" index="3">BCH</li>
+                                <li class="currency-list mar-vnbig lang-currencyList" index="4">VNC（VNBIG的Token代币）</li>
+                                <li class="currency-list mar-iota lang-currencyList" index="5">IOTA</li>
+                                <li class="currency-list lang-currencyList" index="6">ETC</li>
+                                <li class="currency-list lang-currencyList" index="7">EOS</li>
+                            </ul>
+                            <p class="synopsis-text lang-synopsisText" index="4">后期逐步上线其他优质币种。</p>
+                        </div>
+                        <div class="list-right">
+                            <p class="synopsis-title lang-synopsisTitle" index="3">流动性支持</p>
+                            <p class="synopsis-text lang-synopsisText" index="5">VNBIG 在行业内有丰富的资源和众多的合作伙伴。
+                                以及拥有众多东南亚资源，在系统上线前，已和多家国内外的矿厂、投资基金、交易大户达成共识，VNBIG 平台上线后， 他们的交易也将转移至平台。
+                                为平台提供充足的流动性，带给用户良好的交易体验。
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="synopsis-list">
+                        <div class="list-left">
+                            <p class="synopsis-title lang-synopsisTitle" index="4">运营能力</p>
+                            <p class="synopsis-text lang-synopsisText" index="6">VNBIG拥有资深运营团队， 社交媒体互动营销、 社群建设、
+                                深度品牌树立共同打造出东南亚区块链和数字资产的权威品牌。</p>
+                        </div>
+                        <div class="list-right">
+                            <p class="synopsis-title lang-synopsisTitle" index="5">多语言支持</p>
+                            <p class="synopsis-text lang-synopsisText" index="7">
+                                VNBIG第一期上线版本已支持越南语、英文、繁体中文、简体中文四种语言，后期会逐步支持包括日、韩等其他语言，为打造世界级区块链资产交易平台扫清语言障碍。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--核心团队介绍-->
+    <div class="team-synopsis">
+        <div class="team-content">
+            <h3 class="lang-teamTitle" index="0">核心团队介绍</h3>
+            <div class="management-team">
+                <div class="title-box">
+                    <h4 class="lang-teamTitle" index="1">管理团队</h4>
+                    <div class="blue-line"></div>
+                </div>
+                <ul class="management-item">
+                    <li class="management-list">
+                        <p class="management-name lang-teamName" index="0">CEO 恩东</p>
+                        <p class="management-meg lang-teamMeg" index="0">越南知名数字货币投资人。 Foreign Trade University（河内外贸大学），
+                            K48系(2009-2013)，专业：国际商业经济学International Business
+                            Economics，拥有多年的数字货币关注以及从业经验，个人曾经参与投资全球的诸个区块链应用及数字货币项目。</p>
+                    </li>
+                    <li class="management-list">
+                        <p class="management-name lang-teamName" index="1">COO 阮大福</p>
+                        <p class="management-meg lang-teamMeg" index="1">毕业于越南河内百科大学，越南早期数字货币玩家，有一定的社群影响力和扎实的运营经验。</p>
+                    </li>
+                    <li class="management-list list-marginr-zero">
+                        <p class="management-name lang-teamName" index="2">CTO Andrey loshakov</p>
+                        <p class="management-meg lang-teamMeg" index="2">Andrey系统架构师、对冲基金策略分析师。他研发了对冲基金筛选和
+                            RMB对冲母基金组合构建所需的交易引擎。
+                            Andrey从新西伯利亚国立大学毕业， 并从莫斯科new economics school 获得数学金融硕士学位。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="management-team">
+                <div class="title-box">
+                    <h4 class="lang-teamTitle" index="2">顾问团队</h4>
+                    <div class="blue-line"></div>
+                </div>
+                <ul class="management-item">
+                    <li class="management-list">
+                        <img src="web/img/common/xbl.png">
+                        <p class="management-name lang-teamName" index="3">徐宝龙</p>
+                        <p class="management-meg lang-teamMeg" index="3">龙眼区块链创始人，毕业于中国人民大学，北京大学
+                            MBA。曾任火币网（中国三大数字货币交易平台之一）区块投研中心总监2016 年初，创立了
+                            Dragonshield信息安全服务网站为中国海外情报公司和多个安保公司提供公司级信息安全及私人安保服务。</p>
+                    </li>
+                    <li class="management-list">
+                        <img src="web/img/common/lqy.png">
+                        <p class="management-name lang-teamName" index="4">楼霁月</p>
+                        <p class="management-meg lang-teamMeg" index="4">约翰霍普金斯大学研究生学位。Tokenmania Asset Management
+                            Corporation联合创始人。致力于提供数字货币领域全套资产管理服务，从事数字货币对冲基金投资、数字货币现货投资。</p>
+                    </li>
+                    <li class="management-list list-marginr-zero">
+                        <img src="web/img/common/sc.png">
+                        <p class="management-name lang-teamName" index="5">帅初</p>
+                        <p class="management-meg management-center lang-teamMeg" index="5">Qtum创始人；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="6">著名区块链、数字货币投资人；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="7">毕业于中国科技大学和中国科学院；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="8">博士期间就从事区块链技术开发；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="9">参与国内外众多区块链项目。</p>
+                    </li>
+                </ul>
+                <ul class="management-item">
+                    <li class="management-list">
+                        <img src="web/img/common/szy.png">
+                        <p class="management-name lang-teamName" index="6">孙泽宇</p>
+                        <p class="management-meg management-center lang-teamMeg" index="10">库神钱包联合创始人；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="11">无引力基金联合创始人；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="12">北京大学金融科技创新实验室研究员；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="13">业内大咖。</p>
+                    </li>
+                    <li class="management-list">
+                        <img src="web/img/common/yz.png">
+                        <p class="management-name lang-teamName" index="7">椰子</p>
+                        <p class="management-meg management-center lang-teamMeg" index="14">kernas资本合伙人；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="15">前ug创始人；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="16">曾全程参与辅导多家拟上市公司的IPO；</p>
+                        <p class="management-meg management-center lang-teamMeg" index="17">创建ugChain区块链，致力于区块链应用落地。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+@@include('./inc/footer.inc')
+@@include('./inc/js.inc')
+<!-- build:js ./Web/js/echarts.min.js -->
+<script src="./Web/js/plugins/echarts.js"></script>
+<!-- endbuild -->
+<!-- build:js ./Web/js/wpaper.min.js -->
+<script src="./Web/js/plugins/jquery.mCustomScrollbar.js"></script>
+<script src="./Web/js/common/countDown.js"></script>
+<script src="./Web/js/page/wpaper.js"></script>
+<!-- endbuild -->
+@@include('./inc/statis.inc')
+</body>
+
+</html>

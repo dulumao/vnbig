@@ -1,0 +1,94 @@
+<div class="assets-handler" id="handler">
+    <p class="center-title lang-HAhandler"></p>
+    <div class="lists-container">
+        <ul class="lists-handler">
+            <li>
+                <span class="lang-HAinviteNum">我的邀请人数</span>
+                <div class="bottom-content" id="inivtNum">--</div>
+            </li>
+            <li>
+                <span class="lang-HNewNeed" index="0">总收益（USD）</span>
+                <div class="bottom-content" id="totalIncome">
+                    --
+                    <p>--</p>
+                </div>
+            </li>
+            <li>
+                <span class="lang-HNewNeed" index="1">昨日收益（USD）</span>
+                <div class="bottom-content" id="yesterIncome">
+                    --
+                    <p>--</p>
+                </div>
+            </li>
+            <li>
+                <span class="lang-HNewNeed" index="2">今日收益（USD）</span>
+                <div class="bottom-content" id="todayIncom">
+                    --
+                    <p>--</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--<p class="p2"><em class="lang-HAinviteNum"></em>：<strong><span id="Label1">0</span></strong></p>-->
+    <p class="invit-tit lang-HNewNeed" index="3"></p>
+    <div class="invit-intro">
+        <ul class="intro-list">
+            <li>
+                <span class="lang-HNewNeed" index="4">1. 我的邀请码为：</span><em class="main-color" id="inivtCode">--</em>，<span
+                    class="lang-HNewNeed" index="5">可以让您推荐的用户填写到注册时的“邀请码”一栏；</span>
+            </li>
+            <li>
+                <span class="lang-HNewNeed" index="6">2. 您也可以直接发送以下链接给好友点击打开注册；</span>
+                <input name="txtCommend" type="text" value="" class="inp-text" id="txtCommend">
+                <button id="btnCopy" class="ok-btn lang-HAcopyUrl">复制链接</button>
+            </li>
+            <li>
+                <span class="lang-HNewNeed" index="7">3. 保存二维码图片，转发给您的朋友扫码打开链接注册。</span>
+                <div class="QR" id="QR-code"></div>
+            </li>
+        </ul>
+    </div>
+
+    <p class="invit-des">
+        <span class="lang-HNewNeed" index="8">您可以通过邀请朋友来扩大您的投资人脉，交流投资心得，可以将邀请链接发送给朋友。并且，</span>
+        <span class="main-color">
+            <span class="lang-HNewNeed" index="9">您将持续获得被邀请人所有交易手续费的 </span><em id="commission">--</em><span class="lang-HNewNeed" index="10">% 提成奖励</span>
+        </span>
+    </p>
+    <p class="tabTit lang-HAfriendList"></p>
+    <div class="invite-box" onselectstart="return false;" id="inviteBox">
+        <span class="trade-class select-span">USD</span>
+        <span class="trade-class">BTC</span>
+        <span class="trade-class">ETH</span>
+        <span class="trade-class">ETC</span>
+        <span class="trade-class">LTC</span>
+        <span class="trade-class">BCH</span>
+        <span class="trade-class">EOS</span>
+        <span class="trade-class">DOGE</span>
+    </div>
+    <div class="record-info" id="history">
+        <div class="record-header">
+            <span class="lang-HAfriendName td">用户名</span>
+            <span class="lang-HAregisterTime td">注册时间</span>
+            <span class="lang-HAprofit td">收益</span>
+        </div>
+
+        <div class="record-centre tbody">
+            <table>
+                <tbody>
+                    <tr class="odd">
+                        <td class="lang-noData"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="record-bottom">
+        <div class="trade-total">
+            <span class="total-name lang-HAtotal">合计 : </span>
+            <span class="total-number" id="totalNumber">---</span>
+        </div>
+        <div class="page-box" id="page"></div> <!-- 翻页html部分 -->
+    </div>
+
+</div>

@@ -1,0 +1,81 @@
+/*
+ *  转入虚拟币
+ * */
+
+.bank-card {
+    padding-right: 10px;
+
+    .form-box {
+        padding: 20px 0 0 20px;
+
+        .list-item {
+            @include clearfix();
+
+            margin-bottom: 18px;
+            position: relative;
+
+            label {
+                width: 170px;
+                float: left;
+                text-align: right;
+                margin-right: 6px;
+                line-height: 34px;
+            }
+
+            input {
+                float: left;
+                padding: 8px 12px;
+                height: 34px;
+                width: 240px;
+                border: 1px solid #ddd;
+                outline: none;
+                border-radius: 3px;
+                background: none;
+                margin-right: 6px;
+            }
+
+            input:disabled {
+                background: #eee;
+                color: #999;
+            }
+
+            span {
+                line-height: 34px;
+            }
+
+            .tip {
+                clear: both;
+                padding-top: 8px;
+                text-indent: 176px;
+            }
+        }
+    }
+
+    .msg-tip {
+        text-indent: 176px;
+        color: #f00;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        display: none;
+    }
+
+    .add-card {
+        width: 240px;
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .bank-select {
+        width: 236px;
+        border-radius: 3px;
+
+        ul {
+            overflow: auto;
+        }
+    }
+
+    .remove {
+        display: block;
+    }
+}

@@ -1,0 +1,20 @@
+.assets-record {
+    .record-info {
+        .record-header {
+            span {
+                width: 16%;
+
+                &:last-child {
+                    width: 20%;
+                }
+            }
+        }
+        td {
+            width: 16%;
+
+            &:last-child {
+                width: 20%;
+            }
+        }
+    }
+}

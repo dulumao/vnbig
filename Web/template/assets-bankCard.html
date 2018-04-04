@@ -1,0 +1,69 @@
+<div class="bank-card">
+	<p class="center-title lang-title">银行卡管理</p>
+	<p class="orange lang-tips">暂不支持信用卡和支付宝，请填写实名认证的银行卡账户信息</p>
+	<div class="form-box">
+		<div class="list-item">
+			<label class="lang-items" index="0">真实姓名：</label>
+			<input type="text" value="" id="realName" disabled>
+			<span class="lang-items" index="1">实名认证，不能修改</span>
+		</div>
+		<!--<div class="list-item">
+			<label class="lang-items" index="2">选择银行：</label>
+			<div class="div-select bank-select" id="bankSelect">
+				<i></i>
+				<cite></cite>
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+		</div>-->
+		<div class="list-item">
+			<label class="lang-items" index="3">银行卡号：</label>
+			<input type="text" value="" id="cardNumber">
+		</div>
+		<!--<div class="list-item">
+			<label class="lang-items" index="4">银行卡开户行：</label>
+			<input type="text" value="" id="bankType">
+			<p class="tip lang-items" index="5">填写详细的开户行，方便我们及时转账</p>
+		</div>-->
+		<div class="list-item" style="padding-bottom: 10px;">
+			<p class="msg-tip" id="msgTip">tip</p>
+		</div>
+		<div class="list-item">
+			<label>&nbsp;</label>
+			<button type="button" class="main-btn add-card lang-items" index="6" id="submit">添加银行卡</button>
+		</div>
+	</div>
+	<div class="record-box">
+		<div class="info_list_title">
+			<h3 class="lang-box" index="0">添加记录</h3>
+		</div>
+		<table class="table" id="history">
+			<colgroup>
+				<!--<col width="10%">
+				<col width="20%">-->
+				<col width="20%">
+				<col width="20%">
+				<col width="10%">
+			</colgroup>
+			<thead>
+                <tr>
+                    <!--<th class="lang-box" index="1">银行类型</th>
+                    <th class="lang-box" index="2">开户行</th>-->
+                    <th class="lang-box" index="3">户主姓名</th>
+                    <th class="lang-box" index="4">卡号</th>
+                    <th class="lang-box" index="5">操作</th>
+                </tr>
+			</thead>
+			<tbody>
+				<!--<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+				</tr>-->
+			</tbody>
+		</table>
+	</div>
+</div>

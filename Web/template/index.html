@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    @@include('./inc/meta.inc')
+</head>
+
+<body>
+<!--header-->
+@@include('./inc/header.inc')
+<!--center-->
+<div class="index-container">
+    <div class="wellcome-box">
+        <p class="wellcome-text lang-wellText">---</p>
+        <p class="wellcome-about lang-wellAbout">---</p>
+    </div>
+    <!--banner-->
+    <div class="index-banner banner" id="indexBanner">
+        <ul id="bannerItem">
+            <!--<li>
+                <a href="javascript:;" target="_blank" name="eos"></a>
+            </li>
+            <li>
+                <a href="javascript:;" target="_blank" name="invite"></a>
+            </li>
+            <li>
+                <a href="javascript:;" target="_blank" name="fete"></a>
+            </li>
+            <li>
+                <a href="javascript:;" name="sign"></a>
+            </li>
+            <li>
+                <a href="javascript:;" name="trade"></a>
+            </li>-->
+        </ul>
+        <div class="number"></div>
+    </div>
+
+    <div class="index-introduce">
+        <div class="introduce-box">
+            <p class="introduce-title lang-introduceTitle">-</p>
+            <div class="introduce-text">
+                <ul>
+                    <li>
+                        <div class="model-left">
+                            <p class="icon-title lang-modelTitle" index="0">-</p>
+                            <p class="icon-text lang-modelText" index="0">-</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="model-center">
+                            <p class="icon-title lang-modelTitle" index="1">-</p>
+                            <p class="icon-text lang-modelText" index="1">-</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="model-right">
+                            <p class="icon-title lang-modelTitle" index="2">-</p>
+                            <p class="icon-text lang-modelText" index="2">-</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 首页弹窗 -->
+<div class="sell-pop" id="sellPop" style="display: none;">
+    <div class="sell-panel">
+        <i class="close" id="close"></i>
+        <div class="sell-title">Vietnam Coin（VNC）<br>
+            <span class="lang-popPanel" index="0">公开发行！</span>
+        </div>
+        <a href="{{path}}wpaper.html" class="view-now lang-popPanel" index="1">
+            立即查看
+        </a>
+        <div class="count-down">
+            <p index="2" id="countText">--</p>
+            <div class="time-container">
+                <ul class="time-list" id="timeList">
+                    <li>
+                        <div class="time-item" id="dayTime">--</div>
+                        <span class="lang-popPanel" index="3">天</span>
+                    </li>
+                    <li>
+                        <div class="">：</div>
+                        <span></span>
+                    </li>
+                    <li>
+                        <div class="time-item" id="hourTime">--</div>
+                        <span class="lang-popPanel" index="4">小时</span>
+                    </li>
+                    <li>
+                        <div class="">：</div>
+                        <span></span>
+                    </li>
+                    <li>
+                        <div class="time-item" id="minTime">--</div>
+                        <span class="lang-popPanel" index="5">分钟</span>
+                    </li>
+                    <li>
+                        <div class="">：</div>
+                        <span></span>
+                    </li>
+                    <li>
+                        <div class="time-item" id="secondTime">--</div>
+                        <span class="lang-popPanel" index="6">秒</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+@@include('./inc/footer.inc')
+@@include('./inc/js.inc')
+<!-- build:js ./Web/js/index.min.js -->
+<script src="./Web/js/common/banner.js"></script>
+<script src="./Web/js/common/countDown.js"></script>
+<script src="./Web/js/page/index.js"></script>
+<!-- <script src="./Web/js/common/priceListBB.js"></script> -->
+<!-- <script src="./Web/js/common/introduce.js"></script> -->
+<!-- endbuild -->
+@@include('./inc/statis.inc')
+</body>
+
+</html>

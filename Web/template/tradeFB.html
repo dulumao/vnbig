@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    @@include('./inc/meta.inc')
+</head>
+<body>
+<!--header-->
+@@include('./inc/header.inc')
+<!--center-->
+<div class="trade-layout trade-fb">
+    <input type="hidden" value="1" id="type">
+    <div class="trade-left">
+        <div class="titles">
+            <h3 onselectstart="return false;" id="titlesTitle">
+                <span class="coin-to">-</span> /
+                <span class="coin-from">-</span>
+                <i class="titles-icon icon-off"></i>
+            </h3>
+            <!--<h4><span class="coin-to">-</span> / <span class="coin-from">-</span></h4>-->
+        </div>
+        @@include('./inc/tradeMarket.inc')
+        <div class="chart-box" id="chartBox">
+            <div class="full-screen" id="fullScreen">
+                <!--<div class="mask"></div>
+                <div class="tag" id="kFilter">
+                    <span class="tag-logo"></span>
+                    <span class="item-white disabled lang-kBtn" index="0">周期</span>
+                    <span class="item js-line lang-kBtn" index="1">分时</span>
+                    <span class="item js-time" >1min</span>
+                    <span class="item js-time" >3min</span>
+                    <span class="item js-time" >5min</span>
+                    <span class="item js-time" >15min</span>
+                    <span class="item js-time" >30min</span>
+                    <span class="item js-time" >1hour</span>
+                    <span class="item js-time" >2hours</span>
+                    <span class="item js-time" >4hours</span>
+                    <span class="item js-time" >6hours</span>
+                    <span class="item js-time" >12hours</span>
+                    <span class="item js-time" >1day</span>
+                    <span class="item js-time" >1week</span>
+                    <i class="screen open"></i>
+                </div>-->
+                <div class="chart" id="chartContainer"></div>
+            </div>
+        </div>
+        <div class="chart-copyright">
+            <a href="https://www.tradingview.com" target="_blank">chart by TradingView</a>
+        </div>
+        <!--<div class="chart-filter" id="kFilter" style="display: none;">
+            <span data-tag="0,1,2,6" class="lang-kBtn" index="0" data-time="300">5分钟</span>
+            <span data-tag="1,2,3,4,6" class="on lang-kBtn" index="1" data-time="900">15分钟</span>
+            <span data-tag="2,3,4,6" class="lang-kBtn" index="2" data-time="1800">30分钟</span>
+            <span data-tag="2,3,4,6" class="lang-kBtn" index="3" data-time="3600">1小时</span>
+            <span data-tag="5,6" class="lang-kBtn" index="4" data-time="28800">8小时</span>
+            <span data-tag="5,6" class="lang-kBtn" index="5" data-time="86400">日线</span>
+        </div>-->
+        <div class="mask-container">
+            <div class="no-login" id="noLogin">
+                <div class="no-login-content">
+                    <span class="lang-entrustRecord" index="12">您还没有登录，请</span>
+                    <a href="javascript:;" class="lang-entrustRecord" index="13">登录</a>
+                </div>
+            </div>
+            <!--下单 -->
+            <div class="trade-box">
+                <div class="buy" id="buyBox">
+                    <div class="trade-title">
+                        <sapn class="lang-entrustRecord" index="0">委托买入</sapn>
+                        <!-- <span class="coin-to">-</span> -->
+                        <span id="buyMax"></span>
+                    </div>
+                    <div class="handle">
+                        <div class="list">
+                            <label class="lang-buyBB" index="1">买入价格</label>
+                            <div class="input-box">
+                                <em class="coin-from">--</em>
+                                <input type="text" placeholder="请输入价格" class="lang-inputPriceBuy" id="buyPrice"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="list">
+                            <label class="lang-buyBB" index="2">买入数量</label>
+                            <div class="input-box">
+                                <em class="coin-to">--</em>
+                                <input type="text" placeholder="请输入数量" class="lang-inputValBuy" id="buyNum"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trade-info">
+                        <div class="list">
+                            <label class="lang-buyBB" index="3">交易额</label>
+                            <div class="text">
+                                <span id="buyTotal">0</span>
+                                <span class="coin-from">--</span>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <label class="lang-buyBB" index="6">手续费</label>
+                            <div class="text buy-fee">--</div>
+                        </div>
+                        <div class="list">
+                            <label class="lang-buyBB" index="4">交易密码</label>
+                            <div class="input-box">
+                                <i></i>
+                                <input type="text" newpassword="" autocomplete="off" id="buyPwd"
+                                       class="lang-inputPassBuy"
+                                       placeholder="请输入交易密码">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btns rise-btn lang-buyBB" index="5" type="button" id="buyBtn">买入</button>
+                </div>
+                <div class="sell" id="sellBox">
+                    <div class="trade-title">
+                        <span class="lang-entrustRecord" index="1">委托卖出</span>
+                        <!-- <span class="coin-to">-</span> -->
+                        <span id="sellMax"></span>
+                    </div>
+                    <div class="handle">
+                        <div class="list">
+                            <label class="lang-sellBB" index="1">卖出价格</label>
+                            <div class="input-box">
+                                <em class="coin-from">--</em>
+                                <input type="text" placeholder="请输入价格" class="lang-inputPriceSell" id="sellPrice"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="list">
+                            <label class="lang-sellBB" index="2">卖出数量</label>
+                            <div class="input-box">
+                                <em class="coin-to">--</em>
+                                <input type="text" placeholder="请输入数量" class="lang-inputValSell" id="sellNum"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trade-info">
+                        <div class="list">
+                            <label class="lang-sellBB" index="3">交易额</label>
+                            <div class="text">
+                                <span id="sellTotal">0</span>
+                                <span class="coin-from">--</span>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <label class="lang-sellBB" index="6">手续费</label>
+                            <div class="text sell-fee">--</div>
+                        </div>
+                        <div class="list">
+                            <label class="lang-sellBB" index="4">交易密码</label>
+                            <div class="input-box">
+                                <i></i>
+                                <input type="text" newpassword="" autocomplete="off" id="sellPwd"
+                                       class="lang-inputPassSell"
+                                       placeholder="请输入交易密码">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btns drop-btn lang-sellBB" index="5" type="button" id="sellBtn">卖出</button>
+                </div>
+            </div><!-- trade-box -->
+            <!--委托挂单 委托历史-->
+            <div class="history" id="userHistory">
+                <h4 class="table-title" id="tabHistory">
+                    <span class="lang-entrustRecord tab-item current" data-type="order" index="9">委托挂单</span>
+                    <span class="lang-entrustRecord tab-item" data-type="history" index="10">委托历史</span>
+                    <a href="javascript:;" target="_blank" class="fr checkMore" id="checkMore">
+                        <span class="lang-entrustRecord" index="11">查看更多</span>&gt;
+                    </a>
+                </h4>
+                <div class="user-history">
+                    <div class="table-box no-border text-center">
+                        <div class="list thead line-2">
+                            <span class="td td-13 lang-entrustRecord" index="2">时间</span>
+                            <span class="td td-10 lang-entrustRecord" index="3">买／卖</span>
+                            <span class="td td-10 lang-entrustRecord" index="4">币种</span>
+                            <span class="td td-20">
+                                <span class="text">
+                                    <span class="lang-entrustRecord" index="5">委托价格</span>
+                                    (<span class="coin-from">-</span>)
+                                </span>
+                            </span>
+                            <span class="td td-10">
+                                <span class="newline lang-entrustRecord" index="6">委托数量</span>
+                            </span>
+                            <span class="td td-15">
+                                <span class="newline lang-entrustRecord" index="7">成交数量</span>
+                            </span>
+                            <span class="td td-10">
+                                <span class="newline lang-entrustRecord" index="8">尚未成交</span>
+                            </span>
+                            <span class="td td-12">
+                                <span class="newline lang-entrustRecord" index="14">操作</span>
+                            </span>
+                        </div>
+                        <div class="list thead line-2" style="display: none;">
+                            <span class="td td-20 lang-entrustRecord" index="2">时间</span>
+                            <span class="td td-10 lang-entrustRecord" index="3">买/卖</span>
+                            <span class="td td-10 lang-entrustRecord" index="4">币种</span>
+                            <span class="td td-30">
+                                <span class="lang-entrustRecord" index="5">委托价格</span>
+                                (<span class="coin-from">-</span>)
+                            </span>
+                            <span class="td td-15">
+                                <span class="newline lang-entrustRecord" index="6">委托数量</span>
+                            </span>
+                            <span class="td td-15">
+                                <span class="newline lang-entrustRecord" index="7">成交数量</span>
+                            </span>
+                        </div>
+                        <div class="tbody" id="tbody">
+                            <ul>
+                                <!--<li class="list">
+                                    <span class="td td-25">2017-09-22 09:12:22</span>
+                                    <span class="td td-15 rise">买</span>
+                                    <span class="td td-20">0.07302143</span>
+                                    <span class="td td-20">0.31635386</span>
+                                    <span class="td td-20">0.06457683</span>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- history-->
+        </div><!-- trade-box-->
+        </div><!-- trade-left -->
+    <div class="trade-right">
+        <div class="five-order">
+            <div class="table-box text-center no-border">
+                <div class="list thead line-2">
+                    <span class="td td-15">
+                        <span class="newline lang-fiveOrder" index="0">买/卖</span>
+                    </span>
+                    <span class="td td-30">
+                        <span class="text">
+                            <span class="lang-fiveOrder" index="1">价格</span><br/>
+                            (<span class="coin-from">--</span> )
+                        </span>
+                    </span>
+                    <span class="td td-20">
+                        <span class="newline lang-fiveOrder" index="2">委单量</span>
+                    </span>
+                    <span class="td td-35">
+                        <span class="text">
+                            <span class="lang-fiveOrder" index="3">总额</span><br/>
+                            (<span class="coin-from">--</span> )
+                        </span>
+                    </span>
+                </div>
+                <div class="tbody text-center sell-order" id="sellOrder" >
+                    <ul>
+                        <!--<li class="list click">
+                            <span class="td td-19">ETH</span>
+                            <span class="td td-27">0.07302143</span>
+                            <span class="td td-27">316331633163</span>
+                            <span class="td td-27 rise">+0.83</span>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="tbody text-center buy-order" id="buyOrder" >
+                    <ul>
+                        <!--<li class="list click">
+                            <span class="td td-19">ETH</span>
+                            <span class="td td-27">0.07302143</span>
+                            <span class="td td-27">316331633163</span>
+                            <span class="td td-27 rise">+0.83</span>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="order-history" id="history">
+            <div class="table-box text-center no-border">
+                <div class="list thead">
+                    <span class="td td-20 lang-transactionRecord" index="1">时间</span>
+                    <span class="td td-50">
+                        <span class="text">
+                            <span class="lang-transactionRecord" index="3">成交价</span>
+                            (<span class="coin-from">--</span> )
+                        </span>
+                    </span>
+                    <span class="td td-30 lang-transactionRecord" index="4">成交量</span>
+                </div>
+                <div class="tbody">
+                    <ul>
+                        <!--<li class="list click">
+                            <span class="td td-20">ETH</span>
+                            <span class="td td-30">0.07302143</span>
+                            <span class="td td-25">316331633163</span>
+                            <span class="td td-25 rise">+0.83</span>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- trade-right-->
+</div>
+<!--footer-->
+@@include('./inc/footer.inc')
+@@include('./inc/js.inc')
+<!-- build:js ./Web/js/trade.min.js -->
+<script src="./Web/js/plugins/jquery.mCustomScrollbar.js"></script>
+<script src="./Web/js/common/array.js"></script>
+<script src="./Web/js/page/trade/buyInput.js"></script>
+<script src="./Web/js/page/trade/trade.js"></script>
+<!-- endbuild -->
+<!-- build:js ./Web/js/chart.min.js -->
+<script src="./Web/js/plugins/charting_library.js"></script>
+<script src="./Web/js/page/trade/timezone.js"></script>
+<script src="./Web/js/page/trade/datafeed.js"></script>
+<script src="./Web/js/page/trade/chart.js"></script>
+<!-- endbuild -->
+@@include('./inc/statis.inc')
+</body>
+</html>

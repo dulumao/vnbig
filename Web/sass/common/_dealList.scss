@@ -1,0 +1,50 @@
+.dealList{
+    width: 390px !important;
+    border: solid $gray 1px;
+    background: $white;
+    .box-title{
+        padding: 5px;
+        background: $bg-blue;
+        font-size: 24px;
+    }
+    .dealList-tab{
+        padding: 10px 0 0 10px;
+        border-bottom: solid 3px $main;
+    }
+    .tab-btn{
+        display: inline-block;
+        padding: 5px 10px;
+        background: #f6ecd0;
+        cursor: pointer;
+    }
+    .tab-btn.selected{
+        background: $main;
+        color: $white;
+    }
+    .dealList-items{
+        display: flex;
+        background: $bg-blue;
+        span{
+            display: block;
+            padding: 5px 0;
+            flex: 1;
+            text-align: center;
+        }
+    }
+    .dealList-body{
+        max-height: 600px;
+        overflow-y: auto;
+        .list-link{
+            display: flex;
+        }
+        span{
+            display: block;
+            padding: 5px 0;
+            flex: 1;
+            text-align: center;
+        }
+        li:nth-child(even){
+            background: #f0f7fa;
+        }
+    }
+}

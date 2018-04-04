@@ -1,0 +1,228 @@
+.assets-manage {
+    .ft01 {
+        color: #333;
+        font-size: 20px;
+        vertical-align: -2px;
+    }
+
+    .ft02 {
+        color: $main;
+        font-size: 30px;
+    }
+
+    .ft03 {
+        color: #999;
+    }
+
+    .ft04 {
+        color: #ff7519;
+        font-size: 14px;
+    }
+
+    .rt {
+        float: right;
+    }
+
+    .recommend {
+        padding-left: 25px;
+        font-size: 14px;
+        color: $main;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    .my-balance {
+        color: #000;
+        font-size: 18px;
+        margin: 20px 0 40px;
+
+        span {
+            color: $text;
+        }
+
+        .to-recharge {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background: #dba510;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px;
+            margin-left: 20px;
+
+            &:hover {
+                color: #fff !important;
+            }
+        }
+
+        .apply-deposit {
+            text-decoration: underline;
+        }
+    }
+
+    .eam-all {
+        padding: 20px 10px 15px;
+        font-size: 16px;
+    }
+
+    .eam-all em {
+        font-size: 12px;
+        color: #999;
+    }
+
+    .eam-tip {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url("../img/icon/question.png") no-repeat center center;
+        vertical-align: middle;
+        margin-left: 28px;
+    }
+
+    .eam-base {
+        padding: 10px 10px 30px;
+        overflow: hidden;
+        zoom: 1;
+        font-size: 14px;
+    }
+
+    .eam-base span {
+        float: left;
+        width: 185px;
+    }
+
+    .list-choose-block {
+        border-bottom: solid 1px #eee;
+        font-size: 0;
+
+        .choose-btn {
+            display: inline-block;
+            padding: 10px 40px;
+            margin-bottom: -1px;
+            font-size: 18px;
+            color: #7a7a7a;
+            border-bottom: solid 3px transparent;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .choose-btn:hover,
+        .choose-btn.selected {
+            color: $hover;
+            border-bottom: solid 3px $hover;
+        }
+    }
+
+    .money-ico {
+        display: inline-block;
+        width: 24px;
+        height: 33px;
+        margin-bottom: -3px;
+        margin-right: 10px;
+        background: url("../img/icon/dollar.png") no-repeat center bottom;
+        vertical-align: bottom;
+    }
+
+    .eam-sum {
+        margin: 20px 0;
+        color: #666;
+
+        .sum-num {
+            font-size: 18px;
+        }
+    }
+
+    .eam-info-head {
+        overflow: hidden;
+        zoom: 1;
+        padding: 8px;
+        background-color: #f0f7fa;
+        font-size: 14px;
+        color: #666;
+
+        .item {
+            float: left;
+            width: 16%;
+            text-align: center;
+        }
+
+        .freezing {
+            width: 18%;
+        }
+    }
+
+    .eam-info {
+        height: 430px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-top: 5px;
+
+        table {
+            width: 100%;
+            font-size: 14px;
+            border-spacing: 0;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 8px;
+        }
+
+        td img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        td .money {
+            padding-left: 8px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+        }
+
+        td .get-btn,
+        td .pay-btn,
+        td .recharge-btn,
+        td .deposit-btn {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            padding: 3px 5px;
+            cursor: pointer;
+            color: $main;
+            border-radius: 4px;
+
+            &:hover {
+                color: #fff;
+                background: $main;
+            }
+        }
+
+        tr:nth-child(even) {
+            background-color: $bg-gray;
+        }
+
+        .deal-btn {
+            display: inline-block;
+            width: 88px;
+            height: 28px;
+            line-height: 28px;
+            border: 1px solid #a57b08;
+            color: #382503;
+            text-align: center;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background: $main;
+
+            &:hover {
+                color: #382503 !important;
+                opacity: .9;
+            }
+        }
+    }
+}

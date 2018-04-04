@@ -1,0 +1,235 @@
+/*
+ *  转出虚拟币
+ * */
+.outcoin {
+    padding-right: 10px;
+
+    .inp-form {
+        margin: 60px 80px;
+        position: relative;
+
+        .messinfo {
+            position: absolute;
+            bottom: 54px;
+            left: 178px;
+            font-size: 12px;
+            color: #f00;
+            display: none;
+        }
+
+        .inpFormBtn {
+            display: block;
+            margin-left: 178px;
+            margin-top: 38px;
+            width: 230px;
+            height: 44px;
+            line-height: 44px;
+            font-size: 16px;
+            outline: none;
+
+            &:hover {
+                opacity: .9;
+            }
+        }
+    }
+
+    .noEmail-box {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, .4);
+        z-index: 3;
+
+        .noEmail {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            padding: 20px;
+            width: 500px;
+            height: 300px;
+            background: $white;
+            border-radius: 3px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, .15);
+        }
+
+        .binding-Email {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .no-Email-row {
+            margin-bottom: 16px;
+            font-size: 0;
+        }
+
+        .row-title {
+            display: inline-block;
+            width: 30%;
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            text-align: right;
+            margin-right: 2%;
+            vertical-align: middle;
+        }
+
+        input {
+            padding: 8px 12px;
+            height: 34px;
+            box-sizing: border-box;
+            border: 1px #ddd solid;
+            outline: none;
+            border-radius: 3px;
+            background: none;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        .short-input {
+            width: 28%;
+        }
+
+        .lang-input {
+            width: 58%;
+        }
+
+        .noEmail-getCode {
+            @include vertical(middle);
+
+            width: 28%;
+            height: 34px;
+            margin-left: 2%;
+        }
+
+        .E-mail-submit {
+            display: block;
+            margin: 0 auto;
+            margin-top: 16px;
+            width: 230px;
+            height: 44px;
+            line-height: 44px;
+            font-size: 16px;
+        }
+
+        .error-tips {
+            visibility: hidden;
+            margin-top: 16px;
+            color: #ff3127;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .visibility {
+            visibility: visible;
+        }
+    }
+
+    .form-box {
+        .list {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: inline-block;
+            width: 168px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            text-align: right;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .text {
+            line-height: 36px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .input-box {
+            display: inline-block;
+            width: 250px;
+            border: 1px $borColor solid;
+            border-radius: 3px;
+            height: 36px;
+            vertical-align: middle;
+
+            &.address {
+                width: 440px;
+            }
+
+            &.telephone {
+                width: 120px;
+                position: relative;
+            }
+
+            .yzm {
+                position: absolute;
+                width: 120px;
+                height: 34px;
+                top: 0;
+                right: -130px;
+                line-height: 36px;
+                padding: 0;
+            }
+
+            input {
+                padding: 8px 12px;
+                height: 34px;
+                width: 100%;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                background: none;
+            }
+        }
+
+        .tips {
+            padding: 6px 0 0 176px;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .out-tip {
+            display: inline-block;
+            vertical-align: top;
+
+            .min-number {
+                font-size: $fz-small;
+                color: $text-gray;
+            }
+
+            .out-coin {
+                margin: 0 5px;
+            }
+        }
+
+        .particularly-hint {
+            display: none;
+            width: 250px;
+            margin:6px 0 0 180px;
+            font-size: 12px;
+            color: #ff7519;
+            text-align: justify;
+        }
+    }
+
+    .explainBox {
+        margin-top: 30px;
+        line-height: 2;
+    }
+
+    .div-select {
+        z-index: 8 !important;
+    }
+}

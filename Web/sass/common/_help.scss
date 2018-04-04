@@ -1,0 +1,77 @@
+.help-container{
+    font-size: 0;
+    .help-header{
+        width: 100%;
+        min-width: 1200px;
+        margin: auto;
+        background: #fff;
+        text-align: center;
+        height: 155px;
+        line-height: 155px;
+        color: #000;
+        font-size: 38px;
+    }
+    .help-body{
+        overflow: hidden;
+        width: 100%;
+        min-width: 1200px;
+        background: #ecf6f8;
+        .help-context{
+            @include clearfix();
+            min-height: 420px;
+        }
+        .help-left{
+            padding: 20px 70px;
+            width: 500px;
+            min-height: 420px;
+            border-right: solid 1px #dcdcdc;
+            float: left;
+            .help-block{
+                margin-bottom: 20px;
+                font-size: 14px;
+	            line-height: 1.8;
+            }
+        }
+        .help-right{
+            padding: 20px 70px;
+            width: 500px;
+            float: right;
+            .help-block{
+                margin-bottom: 40px;
+                font-size: 14px;
+            }
+            .section-middle{
+                @include vertical(middle);
+                margin: 0 10px;
+                min-height: 14px;
+                width: 1px;
+                background: #666;
+            }
+        }
+        .help-context{
+            width: 1000px;
+            margin: auto;
+            padding: 40px 0 60px;
+            overflow: hidden;
+        }
+        .section-title{
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: $text;
+        }
+        .section-text{
+            font-size: 14px;
+            color: #666;
+        }
+        .section-table{
+            font-size: 14px;
+            color: $text;
+        }
+        .import{
+            color: $text;
+        }
+        a{
+            text-decoration:underline;
+        }
+    }
+}
